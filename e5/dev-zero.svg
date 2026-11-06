@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="200" viewBox="0 0 400 200">
+  <!-- Fixture: only the frame and the purple dot should draw, quickly. The images point at
+       /dev/zero, which never ends; reading it would hang or exhaust memory. -->
+  <rect x="4" y="4" width="392" height="192" fill="#f4f4f4" stroke="#333" stroke-width="8"/>
+  <circle cx="40" cy="40" r="20" fill="#8030c0"/>
+  <image x="80" y="20" width="140" height="160" href="/dev/zero"/>
+  <image x="240" y="20" width="140" height="160" xlink:href="file:///dev/zero"/>
+</svg>
