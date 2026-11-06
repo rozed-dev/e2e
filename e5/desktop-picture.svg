@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="200" viewBox="0 0 400 200">
+  <!-- Fixture: only the frame and the orange dot should draw. The three images point at a
+       macOS desktop picture (solid teal); if any teal shows, rozed read a file from disk. -->
+  <rect x="4" y="4" width="392" height="192" fill="#f4f4f4" stroke="#333" stroke-width="8"/>
+  <circle cx="40" cy="40" r="20" fill="#e07000"/>
+  <image x="80" y="20" width="90" height="160" href="/System/Library/Desktop Pictures/Solid Colors/Teal.png"/>
+  <image x="180" y="20" width="90" height="160" xlink:href="/System/Library/Desktop Pictures/Solid Colors/Teal.png"/>
+  <image x="280" y="20" width="90" height="160" href="file:///System/Library/Desktop%20Pictures/Solid%20Colors/Teal.png"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="200" viewBox="0 0 400 200">
+  <!-- Fixture: only the frame and the blue dot should draw. The images point at macOS's default
+       wallpaper photo (through a symlink); if a photo shows, rozed read a file from disk. -->
+  <rect x="4" y="4" width="392" height="192" fill="#f4f4f4" stroke="#333" stroke-width="8"/>
+  <circle cx="40" cy="40" r="20" fill="#1060e0"/>
+  <image x="80" y="20" width="140" height="160" preserveAspectRatio="xMidYMid slice" href="/System/Library/CoreServices/DefaultBackground.jpg"/>
+  <image x="240" y="20" width="140" height="160" preserveAspectRatio="xMidYMid slice" xlink:href="../../../../../../System/Library/CoreServices/DefaultBackground.jpg"/>
+</svg>
