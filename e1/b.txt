@@ -3,7 +3,7 @@ b: line 2
 b: line 3
 b: line 4
 b: line 5
-b: line 6
+b: line 6, changed in r3
 b: line 7
 b: line 8
 b: line 9
