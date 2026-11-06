@@ -1,0 +1,12 @@
+b: line 1
+b: line 2
+b: line 3
+b: line 4
+b: line 5
+b: line 6, changed in r3
+b: line 7
+b: line 8
+b: line 9
+b: line 10
+b: line 11
+b: line 12
