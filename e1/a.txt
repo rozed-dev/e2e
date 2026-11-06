@@ -7,6 +7,6 @@ a: line 6, changed in r2
 a: line 7
 a: line 8
 a: line 9
-a: line 10
+a: line 10, changed in r4
 a: line 11
 a: line 12
