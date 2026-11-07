@@ -1,0 +1,3 @@
+#!/bin/sh
+# Fixture E8 for Lo's trust handling: an interpreter that only runs e8/evil.sh.
+exec "$(dirname "$0")/../../e8/evil.sh" python
