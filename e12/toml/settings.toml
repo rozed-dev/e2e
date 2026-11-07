@@ -1,4 +1,5 @@
 # Fixture E12: TOML.
 [greeting]
 name = "world"
-punctuation = "!"
+punctuation = "!!"
+excited = true

@@ -4,6 +4,11 @@ variable "name" {
   default = "world"
 }
 
+variable "excited" {
+  type    = bool
+  default = false
+}
+
 output "greeting" {
-  value = "Hello, ${var.name}!"
+  value = var.excited ? "Hello, ${var.name}!!" : "Hello, ${var.name}!"
 }

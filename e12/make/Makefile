@@ -4,4 +4,7 @@ NAME ?= world
 greet:
 	@echo "Hello, $(NAME)!"
 
-.PHONY: greet
+shout:
+	@echo "HELLO, $(NAME)!!"
+
+.PHONY: greet shout
