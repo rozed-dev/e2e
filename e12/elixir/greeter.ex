@@ -1,6 +1,6 @@
 # Fixture E12: Elixir.
 defmodule Greeter do
-  def greet(name) do
-    "Hello, #{name}!"
+  def greet(name, excited \\ false) do
+    if excited, do: "Hello, #{name}!!", else: "Hello, #{name}!"
   end
 end

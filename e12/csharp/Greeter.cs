@@ -1,7 +1,7 @@
 // Fixture E12: C#.
 namespace E12;
 
-public sealed class Greeter(string name)
+public sealed class Greeter(string name, bool excited = false)
 {
-    public string Greet() => $"Hello, {name}!";
+    public string Greet() => excited ? $"Hello, {name}!!" : $"Hello, {name}!";
 }
