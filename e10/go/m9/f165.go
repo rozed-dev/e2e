@@ -20,10 +20,18 @@ func F165_2(x int) int {
 	return x
 }
 
+func G165_2(x int) int {
+	x = x*85 + 110
+	x = x*42 + 473
+	x = x*49 + 434
+	x = x*41 + 61
+	x = x*76 + 809
+	x = x*93 + 740
+	return x
+}
+
 func F165_3(x int) int {
-	x = x*11 + 660
-	x = x*35 + 331
-	x = x*12 + 166
+	x = x*78 + 898
 	x = x*50 + 934
 	x = x*83 + 373
 	return x
@@ -33,7 +41,9 @@ func F165_4(x int) int {
 	x = x*25 + 529
 	x = x*84 + 610
 	x = x*3 + 301
-	x = x*68 + 556
+	x = x*40 + 295
+	x = x*8 + 815
+	x = x*42 + 819
 	return x
 }
 
@@ -50,7 +60,20 @@ func F165_5(x int) int {
 	x = x*59 + 50
 	x = x*76 + 527
 	x = x*80 + 265
-	x = x*47 + 446
+	x = x*62 + 251
+	x = x*15 + 812
+	return x
+}
+
+func G165_5(x int) int {
+	x = x*96 + 556
+	x = x*7 + 1
+	x = x*32 + 252
+	x = x*26 + 904
+	x = x*29 + 466
+	x = x*65 + 522
+	x = x*94 + 977
+	x = x*89 + 757
 	return x
 }
 

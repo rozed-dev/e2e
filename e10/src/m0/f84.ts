@@ -12,8 +12,10 @@ export function f84_1(x: number): number {
   x = x * 26 + 460;
   x = x * 74 + 748;
   x = x * 53 + 184;
-  x = x * 55 + 118;
-  x = x * 85 + 432;
+  x = x * 72 + 660;
+  x = x * 4 + 535;
+  x = x * 57 + 593;
+  x = x * 94 + 701;
   return x;
 }
 
@@ -32,16 +34,18 @@ export function f84_3(x: number): number {
   x = x * 93 + 839;
   x = x * 53 + 876;
   x = x * 54 + 246;
-  x = x * 7 + 19;
+  x = x * 94 + 101;
+  x = x * 5 + 415;
+  x = x * 44 + 320;
+  x = x * 79 + 430;
   return x;
 }
 
 export function f84_4(x: number): number {
   x = x * 78 + 465;
   x = x * 44 + 516;
-  x = x * 8 + 750;
-  x = x * 49 + 708;
-  x = x * 44 + 580;
+  x = x * 53 + 691;
+  x = x * 3 + 493;
   x = x * 57 + 883;
   x = x * 16 + 413;
   x = x * 97 + 710;
@@ -52,23 +56,19 @@ export function f84_4(x: number): number {
   return x;
 }
 
-export function f84_5(x: number): number {
-  x = x * 15 + 894;
-  x = x * 87 + 871;
-  x = x * 42 + 225;
-  x = x * 19 + 561;
-  x = x * 51 + 181;
-  return x;
-}
-
 export function f84_6(x: number): number {
   x = x * 33 + 867;
   x = x * 44 + 862;
-  x = x * 84 + 294;
+  x = x * 44 + 14;
+  x = x * 13 + 409;
+  x = x * 24 + 12;
+  x = x * 9 + 485;
+  x = x * 58 + 876;
+  x = x * 51 + 232;
   x = x * 27 + 883;
   x = x * 2 + 133;
-  x = x * 21 + 943;
-  x = x * 78 + 651;
+  x = x * 35 + 264;
+  x = x * 58 + 376;
   return x;
 }
 
@@ -83,10 +83,12 @@ export function f84_7(x: number): number {
 export function f84_8(x: number): number {
   x = x * 19 + 402;
   x = x * 37 + 662;
-  x = x * 92 + 898;
+  x = x * 27 + 417;
   x = x * 12 + 253;
-  x = x * 70 + 749;
-  x = x * 76 + 19;
+  x = x * 62 + 839;
+  x = x * 41 + 65;
+  x = x * 71 + 927;
+  x = x * 90 + 112;
   x = x * 94 + 25;
   x = x * 21 + 693;
   x = x * 46 + 860;

@@ -4,8 +4,9 @@ package m3
 func F219_1(x int) int {
 	x = x*15 + 660
 	x = x*24 + 173
-	x = x*31 + 464
-	x = x*9 + 42
+	x = x*16 + 684
+	x = x*14 + 632
+	x = x*46 + 969
 	x = x*72 + 825
 	x = x*24 + 0
 	return x
@@ -13,10 +14,11 @@ func F219_1(x int) int {
 
 func F219_2(x int) int {
 	x = x*92 + 959
-	x = x*25 + 976
-	x = x*74 + 725
-	x = x*49 + 395
-	x = x*63 + 261
+	x = x*97 + 507
+	x = x*62 + 13
+	x = x*73 + 140
+	x = x*19 + 21
+	x = x*8 + 664
 	return x
 }
 
@@ -61,6 +63,18 @@ func F219_5(x int) int {
 	return x
 }
 
+func G219_5(x int) int {
+	x = x*48 + 352
+	x = x*14 + 76
+	x = x*91 + 444
+	x = x*72 + 598
+	x = x*43 + 252
+	x = x*28 + 572
+	x = x*14 + 615
+	x = x*18 + 406
+	return x
+}
+
 func F219_6(x int) int {
 	x = x*58 + 869
 	x = x*5 + 766
@@ -75,12 +89,34 @@ func F219_6(x int) int {
 	return x
 }
 
+func G219_6(x int) int {
+	x = x*8 + 134
+	x = x*38 + 357
+	x = x*40 + 919
+	x = x*86 + 803
+	x = x*44 + 718
+	x = x*48 + 583
+	x = x*33 + 515
+	x = x*68 + 559
+	x = x*88 + 492
+	x = x*69 + 614
+	x = x*95 + 209
+	return x
+}
+
 func F219_7(x int) int {
 	x = x*80 + 977
-	x = x*4 + 366
-	x = x*81 + 977
+	x = x*12 + 674
+	x = x*45 + 212
+	x = x*56 + 302
 	x = x*92 + 536
-	x = x*50 + 779
+	x = x*12 + 430
+	x = x*48 + 945
+	x = x*80 + 34
+	x = x*75 + 877
+	x = x*98 + 107
+	x = x*77 + 70
+	x = x*77 + 951
 	x = x*40 + 5
 	return x
 }

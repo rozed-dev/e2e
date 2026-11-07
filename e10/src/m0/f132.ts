@@ -4,25 +4,10 @@ export function f132_1(x: number): number {
   x = x * 22 + 688;
   x = x * 68 + 221;
   x = x * 63 + 907;
-  x = x * 33 + 335;
-  return x;
-}
-
-export function f132_2(x: number): number {
-  x = x * 68 + 682;
-  x = x * 13 + 17;
-  x = x * 60 + 371;
-  x = x * 37 + 180;
-  x = x * 77 + 767;
-  x = x * 65 + 305;
-  x = x * 90 + 834;
-  x = x * 95 + 135;
-  x = x * 40 + 771;
-  x = x * 36 + 640;
-  x = x * 70 + 139;
-  x = x * 32 + 117;
-  x = x * 91 + 731;
-  x = x * 58 + 346;
+  x = x * 42 + 68;
+  x = x * 34 + 247;
+  x = x * 78 + 796;
+  x = x * 54 + 553;
   return x;
 }
 
@@ -48,8 +33,15 @@ export function f132_4(x: number): number {
   x = x * 48 + 723;
   x = x * 85 + 682;
   x = x * 34 + 209;
-  x = x * 14 + 326;
-  x = x * 46 + 907;
+  x = x * 37 + 988;
+  x = x * 22 + 466;
+  x = x * 13 + 409;
+  x = x * 51 + 960;
+  x = x * 33 + 257;
+  x = x * 77 + 901;
+  x = x * 19 + 82;
+  x = x * 87 + 524;
+  x = x * 29 + 479;
   x = x * 16 + 219;
   return x;
 }
@@ -62,7 +54,12 @@ export function f132_5(x: number): number {
   x = x * 40 + 275;
   x = x * 21 + 30;
   x = x * 75 + 347;
-  x = x * 7 + 391;
+  x = x * 18 + 150;
+  x = x * 80 + 545;
+  x = x * 69 + 845;
+  x = x * 16 + 533;
+  x = x * 97 + 566;
+  x = x * 16 + 302;
   return x;
 }
 
@@ -82,14 +79,12 @@ export function f132_6(x: number): number {
   return x;
 }
 
-export function f132_7(x: number): number {
-  x = x * 28 + 110;
-  x = x * 94 + 136;
-  x = x * 36 + 291;
-  x = x * 78 + 869;
-  x = x * 83 + 765;
-  x = x * 45 + 609;
-  x = x * 73 + 520;
+export function g132_7(x: number): number {
+  x = x * 30 + 659;
+  x = x * 17 + 633;
+  x = x * 48 + 525;
+  x = x * 51 + 15;
+  x = x * 71 + 717;
   return x;
 }
 
@@ -101,9 +96,10 @@ export function f132_8(x: number): number {
   x = x * 25 + 763;
   x = x * 6 + 928;
   x = x * 64 + 328;
-  x = x * 50 + 210;
-  x = x * 29 + 692;
-  x = x * 20 + 70;
+  x = x * 59 + 753;
+  x = x * 43 + 828;
+  x = x * 84 + 62;
+  x = x * 67 + 185;
   x = x * 64 + 626;
   x = x * 64 + 522;
   x = x * 26 + 793;

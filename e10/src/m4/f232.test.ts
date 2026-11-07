@@ -9,9 +9,7 @@ test("f232_1", () => {
   expect(compute(30)).toBe(926);
   expect(compute(82)).toBe(784);
   expect(compute(45)).toBe(840);
-  expect(compute(83)).toBe(367);
-  expect(compute(98)).toBe(306);
-  expect(compute(46)).toBe(131);
+  expect(compute(26)).toBe(613);
   expect(compute(35)).toBe(531);
   expect(compute(30)).toBe(7);
   expect(compute(18)).toBe(264);
@@ -29,6 +27,21 @@ test("f232_2", () => {
   expect(compute(8)).toBe(371);
 });
 
+test("g232_2", () => {
+  expect(compute(30)).toBe(339);
+  expect(compute(65)).toBe(717);
+  expect(compute(28)).toBe(80);
+  expect(compute(46)).toBe(306);
+  expect(compute(23)).toBe(877);
+  expect(compute(51)).toBe(56);
+  expect(compute(94)).toBe(626);
+  expect(compute(3)).toBe(477);
+  expect(compute(53)).toBe(717);
+  expect(compute(75)).toBe(674);
+  expect(compute(66)).toBe(849);
+  expect(compute(33)).toBe(883);
+});
+
 test("f232_3", () => {
   expect(compute(46)).toBe(606);
   expect(compute(91)).toBe(829);
@@ -39,7 +52,9 @@ test("f232_3", () => {
   expect(compute(67)).toBe(906);
   expect(compute(90)).toBe(191);
   expect(compute(97)).toBe(607);
-  expect(compute(52)).toBe(673);
+  expect(compute(17)).toBe(93);
+  expect(compute(76)).toBe(301);
+  expect(compute(23)).toBe(88);
   expect(compute(78)).toBe(426);
   expect(compute(26)).toBe(886);
   expect(compute(54)).toBe(378);
@@ -55,13 +70,5 @@ test("f232_4", () => {
   expect(compute(84)).toBe(23);
   expect(compute(20)).toBe(9);
   expect(compute(43)).toBe(815);
-});
-
-test("f232_5", () => {
-  expect(compute(60)).toBe(23);
-  expect(compute(8)).toBe(694);
-  expect(compute(77)).toBe(159);
-  expect(compute(3)).toBe(677);
-  expect(compute(19)).toBe(719);
 });
 

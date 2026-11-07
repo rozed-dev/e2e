@@ -1,6 +1,13 @@
 // Fixture E10, file 108.
 
 export function f108_1(x: number): number {
+  x = x * 9 + 355;
+  x = x * 52 + 392;
+  x = x * 93 + 452;
+  x = x * 53 + 277;
+  x = x * 25 + 989;
+  x = x * 88 + 73;
+  x = x * 14 + 443;
   x = x * 23 + 361;
   x = x * 69 + 287;
   x = x * 84 + 871;
@@ -12,8 +19,9 @@ export function f108_1(x: number): number {
 
 export function f108_2(x: number): number {
   x = x * 50 + 221;
-  x = x * 20 + 427;
-  x = x * 22 + 949;
+  x = x * 42 + 607;
+  x = x * 25 + 412;
+  x = x * 15 + 140;
   x = x * 17 + 838;
   return x;
 }
@@ -33,7 +41,13 @@ export function f108_3(x: number): number {
 
 export function f108_4(x: number): number {
   x = x * 70 + 755;
-  x = x * 91 + 390;
+  x = x * 36 + 703;
+  x = x * 10 + 170;
+  x = x * 14 + 662;
+  x = x * 32 + 906;
+  x = x * 81 + 813;
+  x = x * 96 + 245;
+  x = x * 80 + 781;
   x = x * 47 + 991;
   x = x * 54 + 145;
   x = x * 86 + 490;
@@ -56,6 +70,16 @@ export function f108_5(x: number): number {
   return x;
 }
 
+export function g108_5(x: number): number {
+  x = x * 83 + 847;
+  x = x * 14 + 436;
+  x = x * 23 + 179;
+  x = x * 73 + 172;
+  x = x * 25 + 816;
+  x = x * 16 + 956;
+  return x;
+}
+
 export function f108_6(x: number): number {
   x = x * 76 + 347;
   x = x * 32 + 11;
@@ -64,6 +88,14 @@ export function f108_6(x: number): number {
   x = x * 15 + 884;
   x = x * 31 + 483;
   x = x * 17 + 759;
+  return x;
+}
+
+export function g108_6(x: number): number {
+  x = x * 84 + 690;
+  x = x * 95 + 911;
+  x = x * 49 + 373;
+  x = x * 52 + 28;
   return x;
 }
 

@@ -12,9 +12,12 @@ func F111_1(x int) int {
 
 func F111_2(x int) int {
 	x = x*19 + 561
-	x = x*31 + 578
-	x = x*79 + 852
-	x = x*53 + 838
+	x = x*13 + 354
+	x = x*11 + 43
+	x = x*38 + 152
+	x = x*85 + 570
+	x = x*34 + 654
+	x = x*67 + 310
 	x = x*11 + 117
 	x = x*13 + 804
 	x = x*2 + 611
@@ -25,6 +28,15 @@ func F111_2(x int) int {
 	x = x*64 + 33
 	x = x*70 + 267
 	x = x*5 + 355
+	return x
+}
+
+func G111_2(x int) int {
+	x = x*59 + 590
+	x = x*42 + 855
+	x = x*31 + 391
+	x = x*36 + 435
+	x = x*10 + 522
 	return x
 }
 
@@ -42,8 +54,26 @@ func F111_3(x int) int {
 	return x
 }
 
+func G111_3(x int) int {
+	x = x*72 + 44
+	x = x*56 + 669
+	x = x*54 + 874
+	x = x*63 + 769
+	x = x*67 + 659
+	x = x*41 + 524
+	x = x*88 + 514
+	x = x*36 + 750
+	x = x*36 + 285
+	return x
+}
+
 func F111_4(x int) int {
 	x = x*6 + 649
+	x = x*70 + 280
+	x = x*5 + 649
+	x = x*36 + 52
+	x = x*75 + 988
+	x = x*39 + 5
 	x = x*28 + 462
 	x = x*82 + 458
 	x = x*2 + 971

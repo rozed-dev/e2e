@@ -1,16 +1,11 @@
 // Fixture E10, file 264.
 
-export function f264_1(x: number): number {
-  x = x * 98 + 751;
-  x = x * 30 + 564;
-  x = x * 60 + 105;
-  x = x * 27 + 505;
-  x = x * 64 + 695;
-  x = x * 71 + 551;
-  x = x * 7 + 622;
-  x = x * 53 + 177;
-  x = x * 46 + 907;
-  x = x * 20 + 527;
+export function g264_1(x: number): number {
+  x = x * 18 + 672;
+  x = x * 20 + 731;
+  x = x * 37 + 159;
+  x = x * 17 + 790;
+  x = x * 41 + 475;
   return x;
 }
 
@@ -41,8 +36,14 @@ export function f264_3(x: number): number {
   x = x * 87 + 49;
   x = x * 14 + 247;
   x = x * 46 + 554;
+  x = x * 31 + 560;
   x = x * 40 + 459;
   x = x * 91 + 47;
+  x = x * 43 + 922;
+  x = x * 6 + 176;
+  x = x * 19 + 331;
+  x = x * 66 + 639;
+  x = x * 24 + 240;
   x = x * 20 + 472;
   x = x * 7 + 930;
   x = x * 19 + 79;
@@ -67,14 +68,36 @@ export function f264_5(x: number): number {
   x = x * 34 + 218;
   x = x * 30 + 69;
   x = x * 83 + 955;
-  x = x * 5 + 11;
+  x = x * 35 + 618;
+  x = x * 30 + 770;
+  x = x * 47 + 482;
+  x = x * 63 + 405;
+  x = x * 61 + 348;
+  x = x * 4 + 245;
+  x = x * 98 + 27;
+  x = x * 15 + 63;
+  x = x * 20 + 454;
+  return x;
+}
+
+export function g264_5(x: number): number {
+  x = x * 85 + 790;
+  x = x * 80 + 49;
+  x = x * 78 + 46;
+  x = x * 31 + 389;
+  x = x * 78 + 988;
+  x = x * 10 + 72;
+  x = x * 43 + 998;
   return x;
 }
 
 export function f264_6(x: number): number {
   x = x * 66 + 631;
-  x = x * 73 + 755;
-  x = x * 24 + 850;
+  x = x * 52 + 670;
+  x = x * 33 + 231;
+  x = x * 6 + 943;
+  x = x * 4 + 787;
+  x = x * 34 + 131;
   x = x * 92 + 208;
   x = x * 49 + 845;
   x = x * 91 + 161;
@@ -85,6 +108,17 @@ export function f264_6(x: number): number {
   x = x * 44 + 23;
   x = x * 15 + 509;
   x = x * 69 + 566;
+  return x;
+}
+
+export function g264_6(x: number): number {
+  x = x * 66 + 4;
+  x = x * 90 + 327;
+  x = x * 64 + 222;
+  x = x * 53 + 917;
+  x = x * 46 + 271;
+  x = x * 89 + 527;
+  x = x * 43 + 92;
   return x;
 }
 
@@ -100,8 +134,8 @@ export function f264_7(x: number): number {
   x = x * 60 + 271;
   x = x * 75 + 186;
   x = x * 9 + 796;
-  x = x * 29 + 910;
-  x = x * 9 + 144;
+  x = x * 49 + 258;
+  x = x * 45 + 294;
   x = x * 89 + 707;
   return x;
 }
@@ -111,11 +145,24 @@ export function f264_8(x: number): number {
   x = x * 15 + 634;
   x = x * 26 + 718;
   x = x * 60 + 546;
-  x = x * 94 + 588;
-  x = x * 8 + 760;
-  x = x * 95 + 58;
+  x = x * 77 + 622;
+  x = x * 55 + 370;
+  x = x * 63 + 569;
+  x = x * 30 + 258;
+  x = x * 35 + 396;
+  x = x * 91 + 166;
   x = x * 76 + 953;
   x = x * 32 + 125;
+  return x;
+}
+
+export function g264_8(x: number): number {
+  x = x * 84 + 910;
+  x = x * 43 + 35;
+  x = x * 19 + 704;
+  x = x * 14 + 237;
+  x = x * 78 + 794;
+  x = x * 83 + 499;
   return x;
 }
 

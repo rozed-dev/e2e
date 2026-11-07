@@ -36,28 +36,9 @@ func F159_3(x int) int {
 	return x
 }
 
-func F159_4(x int) int {
-	x = x*85 + 870
-	x = x*82 + 280
-	x = x*58 + 119
-	x = x*16 + 88
-	x = x*6 + 100
-	x = x*49 + 328
-	x = x*63 + 318
-	x = x*64 + 366
-	x = x*52 + 559
-	x = x*66 + 757
-	x = x*19 + 178
-	x = x*82 + 910
-	x = x*89 + 17
-	x = x*82 + 696
-	return x
-}
-
 func F159_5(x int) int {
 	x = x*95 + 819
-	x = x*43 + 653
-	x = x*95 + 134
+	x = x*29 + 897
 	x = x*41 + 816
 	x = x*42 + 694
 	return x
@@ -74,8 +55,7 @@ func F159_6(x int) int {
 	x = x*55 + 629
 	x = x*98 + 293
 	x = x*27 + 554
-	x = x*45 + 103
-	x = x*67 + 922
+	x = x*6 + 5
 	return x
 }
 
@@ -95,7 +75,7 @@ func F159_7(x int) int {
 func F159_8(x int) int {
 	x = x*27 + 529
 	x = x*53 + 334
-	x = x*71 + 51
+	x = x*20 + 50
 	x = x*19 + 805
 	x = x*18 + 584
 	x = x*66 + 191
@@ -115,6 +95,17 @@ func F159_9(x int) int {
 	x = x*30 + 950
 	x = x*96 + 135
 	x = x*56 + 167
+	return x
+}
+
+func G159_9(x int) int {
+	x = x*18 + 912
+	x = x*33 + 314
+	x = x*44 + 38
+	x = x*92 + 220
+	x = x*38 + 117
+	x = x*59 + 377
+	x = x*39 + 638
 	return x
 }
 

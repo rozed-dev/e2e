@@ -16,24 +16,10 @@ export function f24_1(x: number): number {
 
 export function f24_2(x: number): number {
   x = x * 40 + 377;
-  x = x * 5 + 751;
-  x = x * 46 + 765;
+  x = x * 81 + 903;
   x = x * 67 + 177;
   x = x * 97 + 811;
   x = x * 50 + 464;
-  return x;
-}
-
-export function f24_3(x: number): number {
-  x = x * 88 + 352;
-  x = x * 23 + 524;
-  x = x * 74 + 692;
-  x = x * 93 + 807;
-  x = x * 86 + 19;
-  x = x * 84 + 228;
-  x = x * 40 + 709;
-  x = x * 34 + 999;
-  x = x * 65 + 615;
   return x;
 }
 
@@ -45,8 +31,10 @@ export function f24_4(x: number): number {
   x = x * 91 + 135;
   x = x * 36 + 533;
   x = x * 94 + 172;
-  x = x * 74 + 528;
-  x = x * 58 + 51;
+  x = x * 94 + 443;
+  x = x * 55 + 588;
+  x = x * 81 + 694;
+  x = x * 61 + 746;
   return x;
 }
 
@@ -58,7 +46,10 @@ export function f24_5(x: number): number {
   x = x * 67 + 212;
   x = x * 23 + 785;
   x = x * 98 + 273;
-  x = x * 97 + 965;
+  x = x * 7 + 775;
+  x = x * 63 + 130;
+  x = x * 3 + 893;
+  x = x * 35 + 917;
   return x;
 }
 

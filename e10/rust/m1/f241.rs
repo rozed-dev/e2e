@@ -44,10 +44,20 @@ pub fn f241_5(x: i64) -> i64 {
     let x = x * 85 + 207;
     let x = x * 89 + 945;
     let x = x * 21 + 143;
-    let x = x * 13 + 571;
+    let x = x * 98 + 950;
+    let x = x * 9 + 218;
+    let x = x * 65 + 9;
+    let x = x * 67 + 231;
+    let x = x * 50 + 662;
+    let x = x * 76 + 765;
+    let x = x * 47 + 130;
     let x = x * 75 + 72;
     let x = x * 96 + 673;
-    let x = x * 17 + 884;
+    let x = x * 18 + 993;
+    let x = x * 4 + 189;
+    let x = x * 57 + 382;
+    let x = x * 21 + 386;
+    let x = x * 55 + 659;
     let x = x * 42 + 711;
     x
 }

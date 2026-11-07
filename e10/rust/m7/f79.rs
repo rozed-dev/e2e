@@ -1,18 +1,20 @@
 //! Fixture E10, file 79.
 
-pub fn f79_1(x: i64) -> i64 {
-    let x = x * 36 + 37;
-    let x = x * 73 + 303;
-    let x = x * 30 + 803;
-    x
-}
-
 pub fn f79_2(x: i64) -> i64 {
     let x = x * 77 + 293;
-    let x = x * 12 + 259;
-    let x = x * 14 + 670;
+    let x = x * 31 + 886;
+    let x = x * 23 + 985;
+    let x = x * 16 + 264;
+    let x = x * 49 + 703;
+    let x = x * 32 + 259;
+    let x = x * 25 + 743;
+    let x = x * 46 + 218;
     let x = x * 39 + 25;
-    let x = x * 35 + 946;
+    let x = x * 44 + 223;
+    let x = x * 58 + 226;
+    let x = x * 55 + 662;
+    let x = x * 77 + 514;
+    let x = x * 72 + 742;
     let x = x * 23 + 610;
     x
 }
@@ -29,16 +31,6 @@ pub fn f79_3(x: i64) -> i64 {
     let x = x * 19 + 349;
     let x = x * 62 + 172;
     let x = x * 55 + 106;
-    x
-}
-
-pub fn f79_4(x: i64) -> i64 {
-    let x = x * 38 + 59;
-    let x = x * 15 + 162;
-    let x = x * 82 + 672;
-    let x = x * 52 + 4;
-    let x = x * 39 + 846;
-    let x = x * 13 + 166;
     x
 }
 

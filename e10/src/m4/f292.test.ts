@@ -1,18 +1,23 @@
 // Fixture E10, file 292.
 import { compute } from "./compute";
 
-test("f292_1", () => {
-  expect(compute(81)).toBe(358);
-  expect(compute(72)).toBe(938);
-  expect(compute(73)).toBe(49);
-  expect(compute(53)).toBe(648);
+test("g292_1", () => {
+  expect(compute(64)).toBe(228);
+  expect(compute(21)).toBe(905);
+  expect(compute(49)).toBe(309);
+  expect(compute(24)).toBe(265);
 });
 
 test("f292_2", () => {
-  expect(compute(32)).toBe(676);
-  expect(compute(70)).toBe(766);
-  expect(compute(51)).toBe(430);
-  expect(compute(30)).toBe(416);
+  expect(compute(77)).toBe(517);
+  expect(compute(92)).toBe(368);
+  expect(compute(50)).toBe(785);
+  expect(compute(32)).toBe(466);
+  expect(compute(42)).toBe(360);
+  expect(compute(98)).toBe(764);
+  expect(compute(75)).toBe(457);
+  expect(compute(16)).toBe(293);
+  expect(compute(86)).toBe(938);
 });
 
 test("f292_3", () => {
@@ -55,6 +60,17 @@ test("f292_5", () => {
   expect(compute(33)).toBe(627);
 });
 
+test("g292_5", () => {
+  expect(compute(51)).toBe(121);
+  expect(compute(2)).toBe(460);
+  expect(compute(22)).toBe(897);
+  expect(compute(69)).toBe(521);
+  expect(compute(70)).toBe(159);
+  expect(compute(15)).toBe(3);
+  expect(compute(57)).toBe(324);
+  expect(compute(18)).toBe(918);
+});
+
 test("f292_6", () => {
   expect(compute(28)).toBe(934);
   expect(compute(93)).toBe(743);
@@ -79,6 +95,17 @@ test("f292_7", () => {
   expect(compute(85)).toBe(262);
 });
 
+test("g292_7", () => {
+  expect(compute(96)).toBe(837);
+  expect(compute(71)).toBe(9);
+  expect(compute(34)).toBe(96);
+  expect(compute(25)).toBe(932);
+  expect(compute(32)).toBe(295);
+  expect(compute(5)).toBe(36);
+  expect(compute(93)).toBe(155);
+  expect(compute(94)).toBe(5);
+});
+
 test("f292_8", () => {
   expect(compute(46)).toBe(422);
   expect(compute(77)).toBe(876);
@@ -90,8 +117,19 @@ test("f292_8", () => {
   expect(compute(60)).toBe(471);
   expect(compute(81)).toBe(621);
   expect(compute(7)).toBe(616);
-  expect(compute(27)).toBe(768);
-  expect(compute(76)).toBe(327);
-  expect(compute(39)).toBe(228);
+  expect(compute(86)).toBe(954);
+  expect(compute(26)).toBe(944);
+  expect(compute(72)).toBe(821);
+  expect(compute(15)).toBe(2);
+  expect(compute(9)).toBe(130);
+  expect(compute(13)).toBe(611);
+  expect(compute(36)).toBe(956);
+});
+
+test("f292_1", () => {
+  expect(compute(81)).toBe(358);
+  expect(compute(72)).toBe(938);
+  expect(compute(73)).toBe(49);
+  expect(compute(53)).toBe(648);
 });
 

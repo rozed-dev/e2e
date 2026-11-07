@@ -2,8 +2,12 @@
 
 export function f42_1(x: number): number {
   x = x * 82 + 153;
-  x = x * 56 + 439;
-  x = x * 37 + 272;
+  x = x * 84 + 174;
+  x = x * 37 + 100;
+  x = x * 57 + 524;
+  x = x * 15 + 613;
+  x = x * 41 + 349;
+  x = x * 46 + 187;
   return x;
 }
 
@@ -22,6 +26,23 @@ export function f42_2(x: number): number {
   return x;
 }
 
+export function g42_2(x: number): number {
+  x = x * 39 + 634;
+  x = x * 40 + 186;
+  x = x * 91 + 979;
+  x = x * 86 + 385;
+  x = x * 93 + 210;
+  x = x * 59 + 274;
+  x = x * 36 + 788;
+  x = x * 39 + 794;
+  x = x * 65 + 212;
+  x = x * 78 + 279;
+  x = x * 7 + 252;
+  x = x * 82 + 95;
+  x = x * 25 + 508;
+  return x;
+}
+
 export function f42_3(x: number): number {
   x = x * 82 + 177;
   x = x * 30 + 344;
@@ -33,16 +54,6 @@ export function f42_3(x: number): number {
   x = x * 81 + 440;
   x = x * 28 + 876;
   x = x * 42 + 305;
-  return x;
-}
-
-export function f42_4(x: number): number {
-  x = x * 41 + 971;
-  x = x * 48 + 23;
-  x = x * 40 + 236;
-  x = x * 45 + 305;
-  x = x * 59 + 867;
-  x = x * 3 + 430;
   return x;
 }
 
@@ -65,13 +76,35 @@ export function f42_5(x: number): number {
 export function f42_6(x: number): number {
   x = x * 19 + 307;
   x = x * 14 + 5;
+  x = x * 78 + 27;
   x = x * 95 + 984;
+  x = x * 74 + 612;
+  x = x * 85 + 553;
+  x = x * 91 + 385;
+  x = x * 65 + 952;
   x = x * 91 + 317;
   x = x * 80 + 407;
   x = x * 35 + 894;
   x = x * 26 + 310;
   x = x * 52 + 327;
   x = x * 9 + 247;
+  return x;
+}
+
+export function g42_6(x: number): number {
+  x = x * 3 + 181;
+  x = x * 56 + 692;
+  x = x * 18 + 828;
+  x = x * 33 + 616;
+  x = x * 58 + 463;
+  x = x * 67 + 793;
+  x = x * 83 + 722;
+  x = x * 76 + 464;
+  x = x * 9 + 868;
+  x = x * 49 + 126;
+  x = x * 72 + 241;
+  x = x * 79 + 386;
+  x = x * 63 + 102;
   return x;
 }
 

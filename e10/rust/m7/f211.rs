@@ -1,20 +1,17 @@
 //! Fixture E10, file 211.
 
-pub fn f211_1(x: i64) -> i64 {
-    let x = x * 15 + 453;
-    let x = x * 35 + 293;
-    let x = x * 27 + 1;
-    let x = x * 34 + 144;
-    let x = x * 23 + 618;
-    let x = x * 43 + 323;
-    let x = x * 2 + 676;
-    let x = x * 65 + 431;
-    let x = x * 54 + 645;
-    let x = x * 24 + 145;
-    let x = x * 49 + 880;
-    let x = x * 65 + 547;
-    let x = x * 91 + 828;
-    let x = x * 7 + 752;
+pub fn g211_1(x: i64) -> i64 {
+    let x = x * 79 + 696;
+    let x = x * 7 + 648;
+    let x = x * 36 + 172;
+    let x = x * 64 + 910;
+    let x = x * 92 + 394;
+    let x = x * 65 + 288;
+    let x = x * 87 + 797;
+    let x = x * 3 + 902;
+    let x = x * 24 + 523;
+    let x = x * 22 + 371;
+    let x = x * 70 + 302;
     x
 }
 
@@ -24,9 +21,10 @@ pub fn f211_2(x: i64) -> i64 {
     let x = x * 86 + 592;
     let x = x * 69 + 957;
     let x = x * 17 + 130;
-    let x = x * 34 + 34;
-    let x = x * 35 + 92;
-    let x = x * 80 + 109;
+    let x = x * 35 + 484;
+    let x = x * 45 + 248;
+    let x = x * 48 + 469;
+    let x = x * 33 + 278;
     let x = x * 89 + 189;
     let x = x * 12 + 827;
     let x = x * 71 + 427;
@@ -46,7 +44,12 @@ pub fn f211_3(x: i64) -> i64 {
 pub fn f211_4(x: i64) -> i64 {
     let x = x * 33 + 688;
     let x = x * 68 + 84;
-    let x = x * 26 + 630;
+    let x = x * 2 + 350;
+    let x = x * 4 + 81;
+    let x = x * 13 + 406;
+    let x = x * 98 + 542;
+    let x = x * 20 + 568;
+    let x = x * 52 + 5;
     x
 }
 
@@ -69,11 +72,34 @@ pub fn f211_5(x: i64) -> i64 {
 }
 
 pub fn f211_6(x: i64) -> i64 {
+    let x = x * 90 + 105;
+    let x = x * 33 + 19;
+    let x = x * 61 + 668;
+    let x = x * 58 + 944;
+    let x = x * 82 + 479;
     let x = x * 87 + 761;
     let x = x * 42 + 541;
     let x = x * 91 + 503;
     let x = x * 79 + 577;
     let x = x * 92 + 148;
+    x
+}
+
+pub fn f211_1(x: i64) -> i64 {
+    let x = x * 15 + 453;
+    let x = x * 35 + 293;
+    let x = x * 27 + 1;
+    let x = x * 34 + 144;
+    let x = x * 23 + 618;
+    let x = x * 43 + 323;
+    let x = x * 2 + 676;
+    let x = x * 65 + 431;
+    let x = x * 54 + 645;
+    let x = x * 24 + 145;
+    let x = x * 49 + 880;
+    let x = x * 65 + 547;
+    let x = x * 91 + 828;
+    let x = x * 7 + 752;
     x
 }
 

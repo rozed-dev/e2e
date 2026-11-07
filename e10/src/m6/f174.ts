@@ -1,23 +1,5 @@
 // Fixture E10, file 174.
 
-export function f174_1(x: number): number {
-  x = x * 61 + 569;
-  x = x * 50 + 782;
-  x = x * 34 + 470;
-  x = x * 56 + 226;
-  x = x * 80 + 955;
-  x = x * 74 + 802;
-  x = x * 59 + 474;
-  x = x * 46 + 90;
-  x = x * 20 + 7;
-  x = x * 63 + 461;
-  x = x * 21 + 705;
-  x = x * 47 + 913;
-  x = x * 35 + 620;
-  x = x * 54 + 196;
-  return x;
-}
-
 export function f174_2(x: number): number {
   x = x * 67 + 626;
   x = x * 34 + 54;
@@ -25,9 +7,12 @@ export function f174_2(x: number): number {
   x = x * 66 + 857;
   x = x * 38 + 25;
   x = x * 63 + 291;
-  x = x * 93 + 345;
-  x = x * 31 + 62;
-  x = x * 68 + 681;
+  x = x * 31 + 889;
+  x = x * 69 + 661;
+  x = x * 25 + 249;
+  x = x * 33 + 415;
+  x = x * 50 + 620;
+  x = x * 19 + 540;
   x = x * 3 + 899;
   x = x * 79 + 525;
   x = x * 5 + 843;
@@ -42,7 +27,19 @@ export function f174_3(x: number): number {
   x = x * 90 + 469;
   x = x * 41 + 738;
   x = x * 44 + 903;
-  x = x * 16 + 506;
+  x = x * 90 + 463;
+  return x;
+}
+
+export function g174_3(x: number): number {
+  x = x * 87 + 523;
+  x = x * 94 + 356;
+  x = x * 59 + 78;
+  x = x * 63 + 542;
+  x = x * 82 + 121;
+  x = x * 13 + 884;
+  x = x * 74 + 554;
+  x = x * 70 + 355;
   return x;
 }
 
@@ -51,10 +48,15 @@ export function f174_4(x: number): number {
   x = x * 80 + 610;
   x = x * 84 + 520;
   x = x * 24 + 495;
-  x = x * 24 + 58;
-  x = x * 16 + 379;
+  x = x * 92 + 295;
+  x = x * 27 + 418;
+  x = x * 34 + 590;
   x = x * 6 + 537;
-  x = x * 19 + 476;
+  x = x * 13 + 301;
+  x = x * 45 + 519;
+  x = x * 79 + 594;
+  x = x * 25 + 842;
+  x = x * 5 + 445;
   x = x * 90 + 133;
   x = x * 47 + 211;
   x = x * 8 + 636;
