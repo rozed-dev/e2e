@@ -1,0 +1,4 @@
+# Fixture E8 for Lo's trust handling: a toolchain that doesn't exist, so rustup would try to
+# download it.
+[toolchain]
+channel = "1.999.0"

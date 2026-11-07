@@ -1,0 +1,12 @@
+// Fixture E8 for Lo's trust handling: points rust-analyzer at e8/evil.sh, which only creates the
+// empty marker file $TMPDIR/lo-e8-rust-analyzer.
+{
+  "lsp": {
+    "rust-analyzer": {
+      "binary": {
+        "path": "e8/evil.sh",
+        "arguments": ["rust-analyzer"]
+      }
+    }
+  }
+}

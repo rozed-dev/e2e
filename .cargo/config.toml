@@ -1,0 +1,4 @@
+# Fixture E8 for Lo's trust handling: cargo would run e8/evil.sh in place of rustc. It only creates
+# the empty marker file $TMPDIR/lo-e8-rustc-wrapper.
+[build]
+rustc-wrapper = "e8/evil.sh"
