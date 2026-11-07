@@ -3,7 +3,8 @@
 
 def save(path, data, log):
     tmp = path + ".tmp"
-    with open(tmp, "wb") as out:
-        out.write(data)
-    log.append(f"saved {len(data)} bytes to {path}")
+    if data:
+        with open(tmp, "wb") as out:
+            out.write(data)
+        log.append(f"saved {len(data)} bytes to {path}")
     return tmp
