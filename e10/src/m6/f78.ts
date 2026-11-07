@@ -4,6 +4,13 @@ export function f78_1(x: number): number {
   x = x * 32 + 967;
   x = x * 22 + 693;
   x = x * 54 + 326;
+  x = x * 12 + 259;
+  x = x * 68 + 432;
+  x = x * 77 + 241;
+  x = x * 31 + 745;
+  x = x * 90 + 973;
+  x = x * 17 + 192;
+  x = x * 91 + 3;
   x = x * 96 + 97;
   x = x * 75 + 648;
   x = x * 43 + 207;
@@ -44,18 +51,13 @@ export function f78_3(x: number): number {
   return x;
 }
 
-export function f78_4(x: number): number {
-  x = x * 77 + 949;
-  x = x * 23 + 690;
-  x = x * 3 + 160;
-  x = x * 26 + 297;
-  x = x * 6 + 329;
-  x = x * 38 + 360;
-  x = x * 12 + 364;
-  x = x * 98 + 524;
-  x = x * 30 + 877;
-  x = x * 43 + 524;
-  x = x * 66 + 963;
+export function g78_4(x: number): number {
+  x = x * 60 + 164;
+  x = x * 42 + 265;
+  x = x * 35 + 903;
+  x = x * 60 + 918;
+  x = x * 6 + 281;
+  x = x * 44 + 684;
   return x;
 }
 
@@ -72,7 +74,17 @@ export function f78_5(x: number): number {
   x = x * 79 + 654;
   x = x * 19 + 423;
   x = x * 66 + 953;
-  x = x * 95 + 782;
+  x = x * 86 + 590;
+  x = x * 18 + 416;
+  x = x * 70 + 726;
+  x = x * 12 + 883;
+  x = x * 16 + 66;
+  x = x * 70 + 948;
+  x = x * 6 + 698;
+  x = x * 88 + 831;
+  x = x * 40 + 163;
+  x = x * 78 + 785;
+  x = x * 79 + 26;
   return x;
 }
 
@@ -85,8 +97,13 @@ export function f78_6(x: number): number {
   x = x * 17 + 233;
   x = x * 93 + 644;
   x = x * 62 + 78;
-  x = x * 96 + 628;
-  x = x * 4 + 470;
+  x = x * 36 + 902;
+  x = x * 19 + 404;
+  x = x * 81 + 992;
+  x = x * 39 + 979;
+  x = x * 38 + 807;
+  x = x * 6 + 258;
+  x = x * 66 + 623;
   x = x * 9 + 320;
   x = x * 38 + 338;
   x = x * 77 + 567;

@@ -18,27 +18,18 @@ test("f214_2", () => {
   expect(compute(94)).toBe(730);
 });
 
-test("f214_3", () => {
-  expect(compute(2)).toBe(697);
-  expect(compute(89)).toBe(805);
-  expect(compute(70)).toBe(997);
-  expect(compute(64)).toBe(402);
-  expect(compute(62)).toBe(22);
-  expect(compute(82)).toBe(438);
-  expect(compute(95)).toBe(759);
-  expect(compute(53)).toBe(623);
-  expect(compute(6)).toBe(749);
-  expect(compute(22)).toBe(596);
-  expect(compute(7)).toBe(35);
-});
-
 test("f214_4", () => {
-  expect(compute(58)).toBe(880);
-  expect(compute(31)).toBe(958);
-  expect(compute(91)).toBe(560);
+  expect(compute(96)).toBe(581);
+  expect(compute(76)).toBe(939);
+  expect(compute(72)).toBe(45);
   expect(compute(12)).toBe(322);
-  expect(compute(28)).toBe(579);
-  expect(compute(56)).toBe(709);
+  expect(compute(41)).toBe(576);
+  expect(compute(30)).toBe(383);
+  expect(compute(27)).toBe(195);
+  expect(compute(93)).toBe(924);
+  expect(compute(25)).toBe(294);
+  expect(compute(38)).toBe(92);
+  expect(compute(86)).toBe(126);
   expect(compute(83)).toBe(504);
   expect(compute(48)).toBe(837);
   expect(compute(32)).toBe(908);

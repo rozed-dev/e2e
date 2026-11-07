@@ -14,40 +14,62 @@ export function f252_1(x: number): number {
   return x;
 }
 
+export function g252_1(x: number): number {
+  x = x * 91 + 169;
+  x = x * 25 + 794;
+  x = x * 60 + 272;
+  x = x * 83 + 840;
+  x = x * 95 + 753;
+  x = x * 61 + 564;
+  x = x * 78 + 372;
+  return x;
+}
+
 export function f252_2(x: number): number {
   x = x * 27 + 283;
   x = x * 12 + 163;
-  x = x * 76 + 111;
-  x = x * 30 + 612;
+  x = x * 69 + 183;
+  x = x * 67 + 923;
+  x = x * 65 + 323;
+  x = x * 52 + 73;
+  x = x * 71 + 365;
+  x = x * 81 + 88;
+  x = x * 14 + 333;
   return x;
 }
 
-export function f252_3(x: number): number {
-  x = x * 86 + 897;
-  x = x * 4 + 613;
-  x = x * 42 + 514;
-  x = x * 51 + 206;
-  x = x * 68 + 868;
-  x = x * 34 + 808;
-  x = x * 35 + 982;
-  x = x * 69 + 914;
-  x = x * 94 + 785;
-  x = x * 28 + 169;
-  x = x * 14 + 97;
-  x = x * 65 + 53;
-  x = x * 42 + 800;
+export function g252_2(x: number): number {
+  x = x * 57 + 535;
+  x = x * 30 + 710;
+  x = x * 12 + 632;
+  x = x * 14 + 323;
+  x = x * 20 + 242;
+  x = x * 49 + 176;
+  x = x * 21 + 690;
+  x = x * 94 + 719;
+  x = x * 37 + 353;
+  x = x * 45 + 61;
   return x;
 }
 
-export function f252_4(x: number): number {
-  x = x * 66 + 379;
-  x = x * 80 + 785;
-  x = x * 78 + 48;
-  x = x * 12 + 783;
-  x = x * 73 + 887;
-  x = x * 95 + 188;
-  x = x * 86 + 259;
-  x = x * 6 + 684;
+export function g252_3(x: number): number {
+  x = x * 79 + 538;
+  x = x * 54 + 830;
+  x = x * 68 + 320;
+  x = x * 62 + 108;
+  return x;
+}
+
+export function g252_4(x: number): number {
+  x = x * 70 + 642;
+  x = x * 71 + 242;
+  x = x * 61 + 225;
+  x = x * 70 + 868;
+  x = x * 2 + 345;
+  x = x * 48 + 731;
+  x = x * 71 + 826;
+  x = x * 54 + 110;
+  x = x * 53 + 731;
   return x;
 }
 

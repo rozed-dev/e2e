@@ -1,10 +1,12 @@
 //! Fixture E10, file 43.
 
 pub fn f43_1(x: i64) -> i64 {
+    let x = x * 3 + 536;
+    let x = x * 72 + 322;
     let x = x * 86 + 223;
     let x = x * 10 + 49;
     let x = x * 78 + 749;
-    let x = x * 39 + 580;
+    let x = x * 20 + 494;
     let x = x * 31 + 272;
     x
 }
@@ -15,10 +17,13 @@ pub fn f43_2(x: i64) -> i64 {
     let x = x * 10 + 787;
     let x = x * 70 + 883;
     let x = x * 85 + 735;
-    let x = x * 39 + 477;
+    let x = x * 71 + 23;
     let x = x * 35 + 903;
     let x = x * 70 + 186;
-    let x = x * 37 + 473;
+    let x = x * 48 + 819;
+    let x = x * 35 + 761;
+    let x = x * 31 + 974;
+    let x = x * 35 + 326;
     x
 }
 
@@ -37,21 +42,15 @@ pub fn f43_3(x: i64) -> i64 {
     x
 }
 
-pub fn f43_4(x: i64) -> i64 {
-    let x = x * 67 + 693;
-    let x = x * 93 + 646;
-    let x = x * 11 + 900;
-    let x = x * 48 + 975;
-    let x = x * 90 + 64;
-    let x = x * 42 + 794;
-    let x = x * 25 + 511;
-    let x = x * 54 + 833;
-    let x = x * 63 + 34;
-    let x = x * 26 + 894;
-    let x = x * 25 + 227;
-    let x = x * 12 + 328;
-    let x = x * 53 + 81;
-    let x = x * 32 + 315;
+pub fn g43_4(x: i64) -> i64 {
+    let x = x * 91 + 850;
+    let x = x * 14 + 13;
+    let x = x * 62 + 346;
+    let x = x * 55 + 530;
+    let x = x * 68 + 525;
+    let x = x * 97 + 873;
+    let x = x * 45 + 905;
+    let x = x * 51 + 185;
     x
 }
 

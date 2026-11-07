@@ -4,6 +4,13 @@ export function f54_1(x: number): number {
   x = x * 33 + 640;
   x = x * 23 + 406;
   x = x * 75 + 290;
+  x = x * 55 + 73;
+  x = x * 19 + 144;
+  x = x * 38 + 362;
+  x = x * 38 + 835;
+  x = x * 22 + 463;
+  x = x * 96 + 624;
+  x = x * 75 + 938;
   x = x * 9 + 403;
   x = x * 90 + 733;
   x = x * 3 + 823;
@@ -21,13 +28,6 @@ export function f54_2(x: number): number {
   x = x * 98 + 567;
   x = x * 39 + 974;
   x = x * 47 + 982;
-  return x;
-}
-
-export function f54_3(x: number): number {
-  x = x * 7 + 251;
-  x = x * 65 + 589;
-  x = x * 79 + 387;
   return x;
 }
 

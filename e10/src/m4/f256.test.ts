@@ -1,34 +1,11 @@
 // Fixture E10, file 256.
 import { compute } from "./compute";
 
-test("f256_1", () => {
-  expect(compute(66)).toBe(544);
-  expect(compute(9)).toBe(684);
-  expect(compute(24)).toBe(995);
-  expect(compute(84)).toBe(607);
-  expect(compute(80)).toBe(488);
-  expect(compute(90)).toBe(521);
-});
-
-test("f256_2", () => {
-  expect(compute(52)).toBe(205);
-  expect(compute(5)).toBe(257);
-  expect(compute(48)).toBe(768);
-  expect(compute(38)).toBe(12);
-  expect(compute(54)).toBe(496);
-  expect(compute(8)).toBe(260);
-  expect(compute(47)).toBe(438);
-  expect(compute(17)).toBe(213);
-  expect(compute(19)).toBe(899);
-  expect(compute(75)).toBe(113);
-  expect(compute(65)).toBe(970);
-});
-
 test("f256_3", () => {
   expect(compute(89)).toBe(897);
-  expect(compute(73)).toBe(643);
-  expect(compute(32)).toBe(34);
-  expect(compute(40)).toBe(970);
+  expect(compute(4)).toBe(899);
+  expect(compute(31)).toBe(241);
+  expect(compute(22)).toBe(180);
   expect(compute(11)).toBe(118);
   expect(compute(84)).toBe(809);
   expect(compute(48)).toBe(237);
@@ -38,7 +15,10 @@ test("f256_3", () => {
   expect(compute(77)).toBe(243);
   expect(compute(95)).toBe(52);
   expect(compute(39)).toBe(658);
-  expect(compute(51)).toBe(587);
+  expect(compute(92)).toBe(879);
+  expect(compute(68)).toBe(853);
+  expect(compute(32)).toBe(951);
+  expect(compute(84)).toBe(956);
 });
 
 test("f256_4", () => {
@@ -50,6 +30,21 @@ test("f256_4", () => {
   expect(compute(74)).toBe(840);
   expect(compute(61)).toBe(989);
   expect(compute(18)).toBe(956);
+});
+
+test("g256_4", () => {
+  expect(compute(4)).toBe(374);
+  expect(compute(91)).toBe(883);
+  expect(compute(54)).toBe(121);
+  expect(compute(6)).toBe(805);
+  expect(compute(28)).toBe(220);
+  expect(compute(64)).toBe(751);
+  expect(compute(5)).toBe(361);
+  expect(compute(68)).toBe(132);
+  expect(compute(75)).toBe(472);
+  expect(compute(62)).toBe(405);
+  expect(compute(30)).toBe(830);
+  expect(compute(88)).toBe(18);
 });
 
 test("f256_5", () => {
@@ -64,17 +59,20 @@ test("f256_5", () => {
   expect(compute(83)).toBe(921);
 });
 
-test("f256_6", () => {
-  expect(compute(43)).toBe(122);
-  expect(compute(63)).toBe(173);
-  expect(compute(83)).toBe(842);
-});
-
 test("f256_7", () => {
   expect(compute(11)).toBe(655);
   expect(compute(94)).toBe(31);
   expect(compute(97)).toBe(694);
   expect(compute(63)).toBe(910);
   expect(compute(66)).toBe(291);
+});
+
+test("f256_1", () => {
+  expect(compute(66)).toBe(544);
+  expect(compute(9)).toBe(684);
+  expect(compute(24)).toBe(995);
+  expect(compute(84)).toBe(607);
+  expect(compute(80)).toBe(488);
+  expect(compute(90)).toBe(521);
 });
 

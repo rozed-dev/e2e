@@ -13,17 +13,31 @@ pub fn f277_2(x: i64) -> i64 {
     let x = x * 14 + 205;
     let x = x * 81 + 998;
     let x = x * 60 + 938;
-    let x = x * 72 + 697;
-    let x = x * 60 + 553;
-    let x = x * 2 + 526;
+    let x = x * 65 + 782;
+    let x = x * 42 + 145;
+    let x = x * 71 + 8;
+    let x = x * 86 + 117;
     let x = x * 4 + 137;
     let x = x * 89 + 699;
     let x = x * 45 + 339;
     let x = x * 66 + 466;
     let x = x * 76 + 905;
-    let x = x * 92 + 315;
-    let x = x * 68 + 323;
-    let x = x * 24 + 605;
+    let x = x * 11 + 33;
+    let x = x * 41 + 956;
+    let x = x * 13 + 57;
+    let x = x * 67 + 18;
+    let x = x * 82 + 214;
+    let x = x * 3 + 122;
+    let x = x * 79 + 469;
+    x
+}
+
+pub fn g277_2(x: i64) -> i64 {
+    let x = x * 6 + 884;
+    let x = x * 50 + 971;
+    let x = x * 55 + 876;
+    let x = x * 39 + 678;
+    let x = x * 30 + 393;
     x
 }
 
@@ -37,7 +51,9 @@ pub fn f277_3(x: i64) -> i64 {
     let x = x * 81 + 842;
     let x = x * 73 + 695;
     let x = x * 13 + 783;
-    let x = x * 87 + 643;
+    let x = x * 40 + 457;
+    let x = x * 9 + 318;
+    let x = x * 75 + 361;
     let x = x * 15 + 949;
     let x = x * 59 + 996;
     let x = x * 71 + 81;
@@ -61,8 +77,12 @@ pub fn f277_4(x: i64) -> i64 {
 }
 
 pub fn f277_5(x: i64) -> i64 {
-    let x = x * 63 + 239;
-    let x = x * 54 + 698;
+    let x = x * 82 + 604;
+    let x = x * 11 + 163;
+    let x = x * 68 + 410;
+    let x = x * 80 + 264;
+    let x = x * 22 + 85;
+    let x = x * 67 + 607;
     let x = x * 59 + 226;
     let x = x * 64 + 61;
     let x = x * 84 + 145;
@@ -80,6 +100,10 @@ pub fn f277_6(x: i64) -> i64 {
     let x = x * 50 + 403;
     let x = x * 96 + 542;
     let x = x * 90 + 693;
+    let x = x * 93 + 564;
+    let x = x * 10 + 802;
+    let x = x * 40 + 306;
+    let x = x * 5 + 466;
     let x = x * 66 + 902;
     x
 }

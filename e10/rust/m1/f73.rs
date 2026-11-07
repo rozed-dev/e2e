@@ -19,7 +19,27 @@ pub fn f73_2(x: i64) -> i64 {
     let x = x * 71 + 660;
     let x = x * 47 + 21;
     let x = x * 68 + 216;
-    let x = x * 77 + 840;
+    let x = x * 52 + 951;
+    let x = x * 38 + 777;
+    let x = x * 38 + 292;
+    let x = x * 86 + 629;
+    let x = x * 37 + 860;
+    let x = x * 54 + 637;
+    let x = x * 59 + 822;
+    x
+}
+
+pub fn g73_2(x: i64) -> i64 {
+    let x = x * 66 + 243;
+    let x = x * 86 + 762;
+    let x = x * 41 + 204;
+    let x = x * 12 + 575;
+    let x = x * 27 + 754;
+    let x = x * 96 + 755;
+    let x = x * 73 + 879;
+    let x = x * 32 + 211;
+    let x = x * 26 + 815;
+    let x = x * 12 + 233;
     x
 }
 
@@ -40,8 +60,10 @@ pub fn f73_3(x: i64) -> i64 {
 
 pub fn f73_4(x: i64) -> i64 {
     let x = x * 38 + 593;
-    let x = x * 65 + 398;
-    let x = x * 37 + 333;
+    let x = x * 6 + 725;
+    let x = x * 85 + 407;
+    let x = x * 96 + 27;
+    let x = x * 78 + 275;
     let x = x * 73 + 438;
     let x = x * 16 + 587;
     let x = x * 91 + 780;
@@ -50,6 +72,8 @@ pub fn f73_4(x: i64) -> i64 {
     let x = x * 11 + 601;
     let x = x * 40 + 766;
     let x = x * 16 + 623;
+    let x = x * 48 + 606;
+    let x = x * 17 + 802;
     let x = x * 91 + 68;
     let x = x * 52 + 315;
     x

@@ -6,10 +6,14 @@ pub fn f199_1(x: i64) -> i64 {
     let x = x * 54 + 983;
     let x = x * 55 + 444;
     let x = x * 79 + 837;
-    let x = x * 39 + 631;
-    let x = x * 93 + 221;
-    let x = x * 32 + 39;
-    let x = x * 29 + 74;
+    let x = x * 19 + 50;
+    let x = x * 51 + 494;
+    let x = x * 7 + 941;
+    let x = x * 82 + 790;
+    let x = x * 2 + 575;
+    let x = x * 98 + 599;
+    let x = x * 23 + 911;
+    let x = x * 48 + 390;
     x
 }
 
@@ -18,6 +22,12 @@ pub fn f199_2(x: i64) -> i64 {
     let x = x * 25 + 843;
     let x = x * 79 + 157;
     let x = x * 72 + 528;
+    let x = x * 11 + 407;
+    let x = x * 14 + 182;
+    let x = x * 56 + 594;
+    let x = x * 78 + 746;
+    let x = x * 32 + 421;
+    let x = x * 46 + 892;
     let x = x * 10 + 266;
     let x = x * 35 + 654;
     let x = x * 26 + 417;
@@ -30,7 +40,7 @@ pub fn f199_2(x: i64) -> i64 {
 pub fn f199_3(x: i64) -> i64 {
     let x = x * 87 + 122;
     let x = x * 85 + 744;
-    let x = x * 31 + 270;
+    let x = x * 70 + 219;
     let x = x * 14 + 290;
     let x = x * 17 + 268;
     let x = x * 57 + 615;
@@ -49,6 +59,19 @@ pub fn f199_4(x: i64) -> i64 {
     x
 }
 
+pub fn g199_4(x: i64) -> i64 {
+    let x = x * 85 + 153;
+    let x = x * 87 + 428;
+    let x = x * 48 + 920;
+    let x = x * 48 + 129;
+    let x = x * 8 + 507;
+    let x = x * 47 + 714;
+    let x = x * 46 + 516;
+    let x = x * 4 + 594;
+    let x = x * 72 + 116;
+    x
+}
+
 pub fn f199_5(x: i64) -> i64 {
     let x = x * 85 + 531;
     let x = x * 70 + 630;
@@ -59,6 +82,12 @@ pub fn f199_5(x: i64) -> i64 {
     let x = x * 71 + 867;
     let x = x * 53 + 88;
     let x = x * 22 + 117;
+    let x = x * 46 + 684;
+    let x = x * 33 + 158;
+    let x = x * 75 + 187;
+    let x = x * 33 + 744;
+    let x = x * 60 + 502;
+    let x = x * 47 + 287;
     let x = x * 47 + 798;
     let x = x * 16 + 163;
     let x = x * 32 + 947;
@@ -71,6 +100,10 @@ pub fn f199_6(x: i64) -> i64 {
     let x = x * 17 + 966;
     let x = x * 34 + 202;
     let x = x * 45 + 145;
+    let x = x * 52 + 371;
+    let x = x * 83 + 386;
+    let x = x * 27 + 561;
+    let x = x * 8 + 860;
     let x = x * 48 + 993;
     let x = x * 82 + 264;
     let x = x * 14 + 934;
@@ -83,12 +116,16 @@ pub fn f199_7(x: i64) -> i64 {
     let x = x * 33 + 728;
     let x = x * 15 + 637;
     let x = x * 75 + 399;
+    let x = x * 20 + 288;
+    let x = x * 41 + 980;
+    let x = x * 92 + 506;
+    let x = x * 90 + 321;
     let x = x * 91 + 523;
     let x = x * 36 + 96;
     let x = x * 96 + 81;
     let x = x * 61 + 977;
-    let x = x * 64 + 299;
-    let x = x * 41 + 366;
+    let x = x * 17 + 810;
+    let x = x * 90 + 185;
     let x = x * 82 + 713;
     let x = x * 73 + 625;
     x
@@ -96,8 +133,7 @@ pub fn f199_7(x: i64) -> i64 {
 
 pub fn f199_8(x: i64) -> i64 {
     let x = x * 17 + 228;
-    let x = x * 18 + 803;
-    let x = x * 71 + 783;
+    let x = x * 26 + 957;
     x
 }
 

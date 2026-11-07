@@ -8,8 +8,29 @@ export function f138_1(x: number): number {
   return x;
 }
 
+export function f132_2(x: number): number {
+  x = x * 68 + 682;
+  x = x * 13 + 17;
+  x = x * 60 + 371;
+  x = x * 37 + 180;
+  x = x * 77 + 767;
+  x = x * 65 + 305;
+  x = x * 90 + 834;
+  x = x * 95 + 135;
+  x = x * 40 + 771;
+  x = x * 36 + 640;
+  x = x * 70 + 139;
+  x = x * 32 + 117;
+  x = x * 91 + 731;
+  x = x * 58 + 346;
+  return x;
+}
+
 export function f138_2(x: number): number {
   x = x * 73 + 973;
+  x = x * 65 + 54;
+  x = x * 72 + 325;
+  x = x * 92 + 525;
   x = x * 16 + 912;
   x = x * 22 + 85;
   x = x * 25 + 383;
@@ -35,6 +56,19 @@ export function f138_4(x: number): number {
   x = x * 57 + 836;
   x = x * 2 + 781;
   x = x * 86 + 802;
+  return x;
+}
+
+export function g138_4(x: number): number {
+  x = x * 64 + 984;
+  x = x * 2 + 329;
+  x = x * 69 + 760;
+  x = x * 76 + 53;
+  x = x * 38 + 389;
+  x = x * 16 + 983;
+  x = x * 25 + 232;
+  x = x * 62 + 338;
+  x = x * 80 + 267;
   return x;
 }
 

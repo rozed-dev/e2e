@@ -35,8 +35,7 @@ test("f124_3", () => {
   expect(compute(79)).toBe(136);
   expect(compute(89)).toBe(599);
   expect(compute(84)).toBe(434);
-  expect(compute(31)).toBe(269);
-  expect(compute(71)).toBe(396);
+  expect(compute(5)).toBe(647);
 });
 
 test("f124_4", () => {
@@ -46,27 +45,14 @@ test("f124_4", () => {
   expect(compute(75)).toBe(641);
 });
 
-test("f124_5", () => {
-  expect(compute(88)).toBe(943);
-  expect(compute(41)).toBe(492);
-  expect(compute(90)).toBe(604);
-  expect(compute(63)).toBe(317);
-  expect(compute(87)).toBe(106);
-  expect(compute(90)).toBe(567);
-  expect(compute(92)).toBe(647);
-  expect(compute(63)).toBe(453);
-  expect(compute(31)).toBe(993);
-  expect(compute(7)).toBe(310);
-  expect(compute(22)).toBe(763);
-  expect(compute(27)).toBe(940);
-  expect(compute(60)).toBe(155);
-});
-
 test("f124_6", () => {
   expect(compute(36)).toBe(137);
   expect(compute(16)).toBe(47);
   expect(compute(75)).toBe(620);
   expect(compute(96)).toBe(876);
+  expect(compute(87)).toBe(393);
+  expect(compute(90)).toBe(271);
+  expect(compute(40)).toBe(267);
   expect(compute(61)).toBe(232);
   expect(compute(3)).toBe(646);
   expect(compute(36)).toBe(670);
@@ -80,6 +66,13 @@ test("f124_6", () => {
 
 test("f124_7", () => {
   expect(compute(29)).toBe(564);
+  expect(compute(71)).toBe(861);
+  expect(compute(39)).toBe(20);
+  expect(compute(98)).toBe(774);
+  expect(compute(3)).toBe(14);
+  expect(compute(93)).toBe(743);
+  expect(compute(57)).toBe(705);
+  expect(compute(75)).toBe(108);
   expect(compute(42)).toBe(734);
   expect(compute(11)).toBe(720);
   expect(compute(22)).toBe(34);

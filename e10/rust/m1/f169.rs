@@ -6,7 +6,12 @@ pub fn f169_1(x: i64) -> i64 {
     let x = x * 56 + 438;
     let x = x * 11 + 253;
     let x = x * 9 + 708;
-    let x = x * 94 + 48;
+    let x = x * 10 + 458;
+    let x = x * 78 + 344;
+    let x = x * 84 + 690;
+    let x = x * 5 + 324;
+    let x = x * 23 + 125;
+    let x = x * 13 + 244;
     let x = x * 78 + 54;
     let x = x * 62 + 559;
     let x = x * 31 + 676;
@@ -17,8 +22,10 @@ pub fn f169_1(x: i64) -> i64 {
 
 pub fn f169_2(x: i64) -> i64 {
     let x = x * 11 + 400;
-    let x = x * 63 + 693;
-    let x = x * 44 + 523;
+    let x = x * 70 + 484;
+    let x = x * 67 + 161;
+    let x = x * 21 + 654;
+    let x = x * 58 + 593;
     let x = x * 28 + 491;
     x
 }
@@ -50,6 +57,7 @@ pub fn f169_4(x: i64) -> i64 {
     let x = x * 66 + 28;
     let x = x * 94 + 79;
     let x = x * 62 + 461;
+    let x = x * 6 + 37;
     let x = x * 77 + 203;
     let x = x * 64 + 9;
     let x = x * 19 + 954;
@@ -63,25 +71,22 @@ pub fn f169_5(x: i64) -> i64 {
     let x = x * 12 + 603;
     let x = x * 30 + 803;
     let x = x * 41 + 159;
-    let x = x * 18 + 171;
+    let x = x * 98 + 523;
+    let x = x * 77 + 701;
+    let x = x * 11 + 760;
     x
 }
 
-pub fn f169_6(x: i64) -> i64 {
-    let x = x * 23 + 669;
-    let x = x * 31 + 981;
-    let x = x * 20 + 508;
-    let x = x * 21 + 218;
-    let x = x * 89 + 158;
-    let x = x * 94 + 899;
-    let x = x * 26 + 58;
-    let x = x * 19 + 928;
-    let x = x * 24 + 989;
-    let x = x * 35 + 270;
-    let x = x * 30 + 944;
-    let x = x * 96 + 503;
-    let x = x * 38 + 407;
-    let x = x * 72 + 614;
+pub fn g169_5(x: i64) -> i64 {
+    let x = x * 25 + 580;
+    let x = x * 40 + 487;
+    let x = x * 67 + 662;
+    let x = x * 74 + 50;
+    let x = x * 40 + 175;
+    let x = x * 42 + 865;
+    let x = x * 24 + 343;
+    let x = x * 36 + 432;
+    let x = x * 14 + 83;
     x
 }
 
@@ -95,6 +100,10 @@ pub fn f169_7(x: i64) -> i64 {
 
 pub fn f169_8(x: i64) -> i64 {
     let x = x * 87 + 97;
+    let x = x * 10 + 858;
+    let x = x * 47 + 837;
+    let x = x * 55 + 790;
+    let x = x * 19 + 396;
     let x = x * 91 + 249;
     let x = x * 10 + 727;
     let x = x * 35 + 839;

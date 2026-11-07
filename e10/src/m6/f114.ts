@@ -21,16 +21,36 @@ export function f114_2(x: number): number {
   x = x * 95 + 53;
   x = x * 53 + 300;
   x = x * 8 + 18;
-  x = x * 54 + 368;
+  x = x * 72 + 856;
+  x = x * 16 + 696;
+  x = x * 30 + 779;
+  x = x * 23 + 693;
+  x = x * 91 + 952;
+  x = x * 26 + 560;
+  x = x * 67 + 450;
+  x = x * 49 + 639;
+  x = x * 84 + 728;
+  x = x * 84 + 173;
+  x = x * 26 + 517;
   return x;
 }
 
 export function f114_3(x: number): number {
-  x = x * 52 + 13;
+  x = x * 76 + 546;
+  x = x * 90 + 909;
   x = x * 25 + 424;
   x = x * 28 + 569;
-  x = x * 32 + 249;
-  x = x * 5 + 700;
+  x = x * 32 + 977;
+  x = x * 68 + 617;
+  x = x * 19 + 445;
+  return x;
+}
+
+export function g114_3(x: number): number {
+  x = x * 86 + 944;
+  x = x * 79 + 594;
+  x = x * 47 + 364;
+  x = x * 92 + 629;
   return x;
 }
 
@@ -38,6 +58,13 @@ export function f114_4(x: number): number {
   x = x * 17 + 898;
   x = x * 6 + 552;
   x = x * 86 + 591;
+  x = x * 90 + 689;
+  x = x * 76 + 49;
+  x = x * 58 + 434;
+  x = x * 98 + 938;
+  x = x * 55 + 895;
+  x = x * 79 + 727;
+  x = x * 45 + 438;
   x = x * 69 + 969;
   return x;
 }
@@ -50,14 +77,6 @@ export function f114_5(x: number): number {
   x = x * 48 + 645;
   x = x * 79 + 297;
   x = x * 52 + 263;
-  return x;
-}
-
-export function f114_6(x: number): number {
-  x = x * 56 + 526;
-  x = x * 18 + 532;
-  x = x * 11 + 283;
-  x = x * 45 + 815;
   return x;
 }
 
@@ -74,14 +93,6 @@ export function f114_7(x: number): number {
   x = x * 4 + 840;
   x = x * 61 + 649;
   x = x * 47 + 666;
-  return x;
-}
-
-export function f114_8(x: number): number {
-  x = x * 9 + 307;
-  x = x * 38 + 42;
-  x = x * 84 + 874;
-  x = x * 90 + 810;
   return x;
 }
 

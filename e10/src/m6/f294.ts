@@ -1,17 +1,5 @@
 // Fixture E10, file 294.
 
-export function f294_1(x: number): number {
-  x = x * 89 + 145;
-  x = x * 45 + 158;
-  x = x * 90 + 650;
-  x = x * 71 + 49;
-  x = x * 5 + 824;
-  x = x * 16 + 134;
-  x = x * 22 + 789;
-  x = x * 23 + 657;
-  return x;
-}
-
 export function f294_2(x: number): number {
   x = x * 11 + 774;
   x = x * 25 + 722;
@@ -33,9 +21,8 @@ export function f294_3(x: number): number {
   x = x * 41 + 350;
   x = x * 23 + 155;
   x = x * 90 + 530;
-  x = x * 25 + 257;
-  x = x * 12 + 235;
-  x = x * 18 + 626;
+  x = x * 68 + 840;
+  x = x * 28 + 35;
   x = x * 29 + 461;
   x = x * 42 + 592;
   x = x * 80 + 221;
@@ -44,8 +31,13 @@ export function f294_3(x: number): number {
 }
 
 export function f294_4(x: number): number {
-  x = x * 75 + 593;
-  x = x * 58 + 339;
+  x = x * 11 + 587;
+  x = x * 9 + 811;
+  x = x * 23 + 992;
+  x = x * 66 + 484;
+  x = x * 74 + 323;
+  x = x * 60 + 183;
+  x = x * 59 + 701;
   x = x * 77 + 305;
   return x;
 }
@@ -55,7 +47,9 @@ export function f294_5(x: number): number {
   x = x * 43 + 643;
   x = x * 48 + 100;
   x = x * 6 + 443;
-  x = x * 84 + 447;
+  x = x * 74 + 212;
+  x = x * 26 + 529;
+  x = x * 17 + 957;
   return x;
 }
 
@@ -70,6 +64,13 @@ export function f294_6(x: number): number {
 }
 
 export function f294_7(x: number): number {
+  x = x * 80 + 609;
+  x = x * 82 + 620;
+  x = x * 8 + 953;
+  x = x * 46 + 558;
+  x = x * 23 + 768;
+  x = x * 6 + 393;
+  x = x * 40 + 879;
   x = x * 47 + 586;
   x = x * 53 + 376;
   x = x * 95 + 353;

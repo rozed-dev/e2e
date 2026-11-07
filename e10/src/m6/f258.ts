@@ -7,10 +7,18 @@ export function f258_1(x: number): number {
   x = x * 5 + 8;
   x = x * 76 + 128;
   x = x * 69 + 705;
-  x = x * 4 + 71;
-  x = x * 85 + 481;
-  x = x * 66 + 298;
+  x = x * 65 + 499;
+  x = x * 91 + 351;
   x = x * 23 + 52;
+  return x;
+}
+
+export function g258_1(x: number): number {
+  x = x * 9 + 89;
+  x = x * 87 + 600;
+  x = x * 64 + 32;
+  x = x * 23 + 227;
+  x = x * 36 + 818;
   return x;
 }
 
@@ -32,7 +40,8 @@ export function f258_3(x: number): number {
   x = x * 10 + 464;
   x = x * 79 + 220;
   x = x * 47 + 174;
-  x = x * 74 + 918;
+  x = x * 70 + 837;
+  x = x * 8 + 995;
   x = x * 11 + 893;
   return x;
 }
@@ -46,7 +55,11 @@ export function f258_4(x: number): number {
   x = x * 65 + 271;
   x = x * 41 + 282;
   x = x * 2 + 823;
-  x = x * 57 + 879;
+  x = x * 18 + 849;
+  x = x * 79 + 850;
+  x = x * 87 + 145;
+  x = x * 3 + 664;
+  x = x * 87 + 175;
   x = x * 74 + 343;
   x = x * 83 + 531;
   x = x * 31 + 393;

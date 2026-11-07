@@ -9,7 +9,9 @@ export function f126_1(x: number): number {
   x = x * 91 + 681;
   x = x * 35 + 948;
   x = x * 10 + 522;
-  x = x * 49 + 429;
+  x = x * 21 + 137;
+  x = x * 89 + 460;
+  x = x * 95 + 664;
   x = x * 54 + 367;
   x = x * 25 + 133;
   return x;
@@ -26,6 +28,11 @@ export function f126_2(x: number): number {
   x = x * 36 + 733;
   x = x * 87 + 168;
   x = x * 88 + 333;
+  x = x * 22 + 933;
+  x = x * 51 + 323;
+  x = x * 4 + 79;
+  x = x * 48 + 584;
+  x = x * 19 + 663;
   x = x * 57 + 354;
   x = x * 38 + 607;
   x = x * 40 + 110;
@@ -33,9 +40,21 @@ export function f126_2(x: number): number {
   return x;
 }
 
+export function g126_2(x: number): number {
+  x = x * 32 + 453;
+  x = x * 92 + 998;
+  x = x * 2 + 235;
+  x = x * 63 + 226;
+  x = x * 35 + 853;
+  x = x * 71 + 670;
+  x = x * 94 + 296;
+  x = x * 60 + 838;
+  return x;
+}
+
 export function f126_3(x: number): number {
   x = x * 62 + 448;
-  x = x * 49 + 675;
+  x = x * 86 + 742;
   x = x * 88 + 200;
   x = x * 41 + 217;
   x = x * 15 + 246;
@@ -52,7 +71,9 @@ export function f126_4(x: number): number {
 export function f126_5(x: number): number {
   x = x * 94 + 743;
   x = x * 98 + 589;
-  x = x * 70 + 473;
+  x = x * 50 + 768;
+  x = x * 91 + 791;
+  x = x * 91 + 754;
   x = x * 67 + 794;
   return x;
 }
@@ -67,11 +88,24 @@ export function f126_6(x: number): number {
   x = x * 57 + 936;
   x = x * 56 + 429;
   x = x * 75 + 302;
-  x = x * 27 + 832;
+  x = x * 55 + 939;
+  x = x * 2 + 532;
+  x = x * 5 + 443;
   x = x * 89 + 408;
   x = x * 73 + 223;
   x = x * 31 + 393;
   x = x * 20 + 817;
+  return x;
+}
+
+export function g126_6(x: number): number {
+  x = x * 31 + 976;
+  x = x * 26 + 62;
+  x = x * 89 + 667;
+  x = x * 10 + 61;
+  x = x * 97 + 855;
+  x = x * 31 + 286;
+  x = x * 94 + 344;
   return x;
 }
 

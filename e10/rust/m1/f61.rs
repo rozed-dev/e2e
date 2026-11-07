@@ -18,26 +18,23 @@ pub fn f61_2(x: i64) -> i64 {
     let x = x * 31 + 612;
     let x = x * 50 + 16;
     let x = x * 69 + 687;
-    let x = x * 75 + 60;
-    x
-}
-
-pub fn f61_3(x: i64) -> i64 {
-    let x = x * 77 + 248;
-    let x = x * 17 + 963;
-    let x = x * 55 + 700;
-    let x = x * 91 + 710;
-    let x = x * 7 + 508;
-    let x = x * 81 + 883;
-    let x = x * 17 + 658;
+    let x = x * 84 + 104;
+    let x = x * 83 + 917;
+    let x = x * 14 + 52;
+    let x = x * 31 + 152;
     x
 }
 
 pub fn f61_4(x: i64) -> i64 {
     let x = x * 24 + 546;
     let x = x * 31 + 707;
-    let x = x * 98 + 818;
-    let x = x * 28 + 441;
+    let x = x * 9 + 338;
+    let x = x * 25 + 807;
+    let x = x * 80 + 31;
+    let x = x * 12 + 817;
+    let x = x * 22 + 60;
+    let x = x * 54 + 441;
+    let x = x * 6 + 91;
     let x = x * 24 + 106;
     let x = x * 47 + 673;
     let x = x * 50 + 787;
@@ -60,6 +57,20 @@ pub fn f61_5(x: i64) -> i64 {
     let x = x * 57 + 129;
     let x = x * 89 + 143;
     let x = x * 65 + 93;
+    x
+}
+
+pub fn g61_5(x: i64) -> i64 {
+    let x = x * 86 + 106;
+    let x = x * 58 + 490;
+    let x = x * 60 + 60;
+    let x = x * 79 + 150;
+    let x = x * 36 + 443;
+    let x = x * 30 + 865;
+    let x = x * 78 + 902;
+    let x = x * 20 + 106;
+    let x = x * 96 + 735;
+    let x = x * 72 + 37;
     x
 }
 

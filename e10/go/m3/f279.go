@@ -14,10 +14,34 @@ func F279_1(x int) int {
 	return x
 }
 
+func G279_1(x int) int {
+	x = x*32 + 984
+	x = x*20 + 307
+	x = x*10 + 394
+	x = x*83 + 556
+	x = x*90 + 778
+	x = x*10 + 128
+	x = x*68 + 618
+	x = x*97 + 759
+	x = x*71 + 381
+	x = x*9 + 921
+	return x
+}
+
 func F279_2(x int) int {
 	x = x*88 + 386
 	x = x*80 + 809
-	x = x*67 + 509
+	x = x*17 + 489
+	x = x*43 + 993
+	x = x*48 + 14
+	return x
+}
+
+func G279_2(x int) int {
+	x = x*29 + 519
+	x = x*49 + 726
+	x = x*97 + 112
+	x = x*2 + 344
 	return x
 }
 
@@ -33,6 +57,20 @@ func F279_3(x int) int {
 	return x
 }
 
+func G279_3(x int) int {
+	x = x*59 + 242
+	x = x*2 + 466
+	x = x*40 + 389
+	x = x*17 + 382
+	x = x*49 + 879
+	x = x*30 + 556
+	x = x*23 + 98
+	x = x*16 + 435
+	x = x*70 + 727
+	x = x*97 + 313
+	return x
+}
+
 func F279_4(x int) int {
 	x = x*27 + 313
 	x = x*91 + 137
@@ -44,6 +82,16 @@ func F279_4(x int) int {
 	x = x*92 + 386
 	x = x*70 + 819
 	x = x*27 + 814
+	return x
+}
+
+func G279_4(x int) int {
+	x = x*7 + 622
+	x = x*18 + 896
+	x = x*43 + 734
+	x = x*39 + 452
+	x = x*3 + 630
+	x = x*11 + 513
 	return x
 }
 

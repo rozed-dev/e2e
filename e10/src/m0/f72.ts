@@ -17,6 +17,23 @@ export function f72_1(x: number): number {
   return x;
 }
 
+export function g72_1(x: number): number {
+  x = x * 32 + 253;
+  x = x * 47 + 627;
+  x = x * 20 + 284;
+  x = x * 58 + 733;
+  x = x * 63 + 647;
+  x = x * 80 + 38;
+  x = x * 62 + 827;
+  x = x * 30 + 181;
+  x = x * 36 + 569;
+  x = x * 86 + 956;
+  x = x * 25 + 297;
+  x = x * 28 + 516;
+  x = x * 11 + 793;
+  return x;
+}
+
 export function f72_2(x: number): number {
   x = x * 39 + 154;
   x = x * 24 + 813;
@@ -35,8 +52,9 @@ export function f72_3(x: number): number {
 
 export function f72_4(x: number): number {
   x = x * 65 + 112;
-  x = x * 82 + 215;
-  x = x * 16 + 765;
+  x = x * 63 + 397;
+  x = x * 74 + 653;
+  x = x * 48 + 127;
   return x;
 }
 
