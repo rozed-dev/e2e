@@ -4,6 +4,6 @@ pub fn average(values: &[f64]) -> f64 {
     if values.is_empty() {
         return 0.0;
     }
-    let total: f64 = values.iter().sum();
-    total / values.len() as f64
+    let sum: f64 = values.iter().sum();
+    sum / values.len() as f64
 }
