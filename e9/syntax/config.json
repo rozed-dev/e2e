@@ -1,0 +1,10 @@
+{
+  "name": "e9",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
