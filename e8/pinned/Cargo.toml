@@ -1,0 +1,8 @@
+# Fixture E8: a crate of its own for the toolchain file, so it can't stop cargo in e8/rust/ before
+# cargo reaches the rustc wrapper.
+[package]
+name = "e8-pinned"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

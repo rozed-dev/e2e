@@ -1,6 +1,6 @@
-// Fixture E8 for Lo's trust handling: a virtual environment whose interpreter,
-// e8/venv/bin/python, only runs e8/evil.sh, which creates $TMPDIR/lo-e8-python.
+// Fixture E8 for Lo's trust handling: the virtual environment .venv, whose bin/python only runs
+// e8/evil.sh, which creates the empty marker file $TMPDIR/lo-e8-python.
 {
-  "venvPath": "e8",
-  "venv": "venv"
+  "venvPath": ".",
+  "venv": ".venv"
 }

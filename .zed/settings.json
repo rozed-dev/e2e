@@ -1,12 +1,10 @@
-// Fixture E8 for Lo's trust handling: points rust-analyzer at e8/evil.sh, which only creates the
-// empty marker file $TMPDIR/lo-e8-rust-analyzer.
+// Fixture E8 for Lo's trust handling: points each language server at e8/evil.sh, which only
+// creates the empty marker file $TMPDIR/lo-e8-<server>.
 {
   "lsp": {
-    "rust-analyzer": {
-      "binary": {
-        "path": "e8/evil.sh",
-        "arguments": ["rust-analyzer"]
-      }
-    }
+    "rust-analyzer": { "binary": { "path": "e8/evil.sh", "arguments": ["rust-analyzer"] } },
+    "gopls": { "binary": { "path": "e8/evil.sh", "arguments": ["gopls"] } },
+    "vtsls": { "binary": { "path": "e8/evil.sh", "arguments": ["vtsls"] } },
+    "basedpyright": { "binary": { "path": "e8/evil.sh", "arguments": ["basedpyright"] } }
   }
 }
