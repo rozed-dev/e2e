@@ -1,8 +1,10 @@
 # The `ci` check that fixtures E4 and E5 need (script/e2e/fixtures.sh in scornz/lo). Its result
-# comes from the `ci-result` files a change adds or changes: `pass`, `fail`, or `slow`, which
-# passes after 10 minutes. With several, as in a merge group, the worst wins, and with none it
-# passes. It runs for pull requests into e4/ branches and their merge queue, and on demand for
-# E5's pull requests, which GitHub opens without running any workflow.
+# comes from the `ci-result` files a change adds or changes: `pass`, `fail`, `slow` (passes after
+# 10 minutes), `flaky` (fails on a run's first attempt, and passes when run again) or
+# `fail-in-queue` (fails only in the merge queue). With several, as in a merge group, the worst
+# wins, and with none it passes. It runs for pull requests into e4/ branches and their merge queue,
+# and by hand on E5's branches, which GitHub opens pull requests from without running any workflow,
+# and on e4/pending.
 name: ci
 
 on:
@@ -12,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       base:
-        description: The branch the pull request targets
+        description: The branch the pull request targets, e4/gated or e4/queued
         required: true
         type: string
 
@@ -44,8 +46,13 @@ jobs:
             pull_request) base=$PR_BASE head=$PR_HEAD ;;
             merge_group) base=$GROUP_BASE head=$GROUP_HEAD ;;
             workflow_dispatch)
-              if ! [[ $DISPATCH_BASE =~ ^e4/[a-z]+$ ]]; then
-                echo "::error::The base is one of E4's branches, not '$DISPATCH_BASE'."
+              # Only where a fixture needs it, so a hand-run check can't stand in for another.
+              if ! [[ $GITHUB_REF =~ ^refs/heads/(e5/[a-z]+-[0-9]+|e4/pending)$ ]]; then
+                echo "::error::ci runs by hand only on E5's branches and e4/pending, not $GITHUB_REF."
+                exit 1
+              fi
+              if ! [[ $DISPATCH_BASE =~ ^e4/(gated|queued)$ ]]; then
+                echo "::error::The base is e4/gated or e4/queued, not '$DISPATCH_BASE'."
                 exit 1
               fi
               base=$(git rev-parse --verify "refs/remotes/origin/$DISPATCH_BASE^{commit}")
@@ -69,8 +76,22 @@ jobs:
               pass) ;;
               fail) result=fail ;;
               slow) if [[ $result == pass ]]; then result=slow; fi ;;
+              flaky)
+                if ((GITHUB_RUN_ATTEMPT == 1)); then
+                  result=fail
+                else
+                  echo "This is attempt $GITHUB_RUN_ATTEMPT, so $file passes."
+                fi
+                ;;
+              fail-in-queue)
+                if [[ $EVENT == merge_group ]]; then
+                  result=fail
+                else
+                  echo "This isn't the merge queue, so $file passes."
+                fi
+                ;;
               *)
-                echo "::error file=$file::A ci-result file says pass, fail or slow, not '$said'."
+                echo "::error file=$file::A ci-result file says pass, fail, slow, flaky or fail-in-queue, not '$said'."
                 exit 1
                 ;;
             esac
