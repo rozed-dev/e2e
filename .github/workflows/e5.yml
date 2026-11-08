@@ -9,10 +9,15 @@
 # - e5/failing-<n> into e4/gated, where ci fails, so approving it isn't enough;
 # - e5/queue-<n> into e4/queued, where ci passes, so it can join the merge queue.
 #
+# With `workflows`, it instead opens a pull request from e5/workflows-<n>, which rozed-bot pushes,
+# into e4/gated: its ruleset takes the workflows only in a pull request rozed-bot, the code owner,
+# approves, so another account has to open it. It opens it only if the branch changes nothing but
+# .github/workflows.
+#
 # GitHub runs no workflow for a pull request a workflow opened, so this runs ci on each branch. Run
 # again for the same generation, it adds only what's missing.
 name: e5
-run-name: E5 generation ${{ inputs.generation }}
+run-name: ${{ inputs.workflows && format('E5 workflows {0}', inputs.generation) || format('E5 generation {0}', inputs.generation) }}
 
 on:
   workflow_dispatch:
@@ -21,6 +26,10 @@ on:
         description: The number that ends each branch's name
         required: true
         type: string
+      workflows:
+        description: Open only e5/workflows-<generation>'s pull request into e4/gated
+        type: boolean
+        default: false
 
 permissions:
   actions: write # runs ci
@@ -45,6 +54,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GENERATION: ${{ inputs.generation }}
+          WORKFLOWS: ${{ inputs.workflows }}
         run: |
           if ! [[ $GENERATION =~ ^[1-9][0-9]{0,5}$ ]]; then
             echo "::error::The generation is a number, not '$GENERATION'."
@@ -53,25 +63,10 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          # Opens e5/<kind>-<generation> into <base>, adding a ci-result file that says <result>,
-          # unless it's open already, and runs ci on it unless ci ran there.
+          # Opens a pull request from <branch>, at <head>, into <base>, unless there's one, and runs
+          # ci on it unless ci ran there.
           open_pull_request() {
-            local kind=$1 base=$2 result=$3 about=$4
-            local branch="e5/$kind-$GENERATION" dir="e5/$kind-$GENERATION" head pr runs attempt
-            if git rev-parse --verify --quiet "refs/remotes/origin/$branch" >/dev/null; then
-              head=$(git rev-parse "refs/remotes/origin/$branch")
-            else
-              git checkout --quiet --detach "refs/remotes/origin/$base"
-              mkdir -p "$dir"
-              echo "$result" >"$dir/ci-result"
-              printf '%s\n' "# E5: $kind, generation $GENERATION" "" "$about" "" \
-                "rozed-bot may review, approve and merge this pull request." >"$dir/notes.md"
-              git add "$dir"
-              git commit --quiet --message "test(e5): open $kind-$GENERATION"
-              git push --quiet origin "HEAD:refs/heads/$branch"
-              head=$(git rev-parse HEAD)
-              echo "Pushed $branch."
-            fi
+            local branch=$1 head=$2 base=$3 title=$4 body=$5 pr runs attempt
             # A branch pushed a moment ago can be invisible to the API for a moment, and a failed
             # request may still have opened the pull request, so it looks before trying again.
             for attempt in 1 2 3; do
@@ -80,9 +75,7 @@ jobs:
                   and .head.repo.full_name == \"$GITHUB_REPOSITORY\") | .number) // empty")
               [[ -z $pr ]] || break
               if pr=$(gh api -X POST "repos/$GITHUB_REPOSITORY/pulls" -f head="$branch" -f base="$base" \
-                -f title="E5: $kind (generation $GENERATION)" \
-                -f body="Fixture E5 (pull requests rozed-bot can approve), opened by github-actions[bot] so that rozed-bot can review it. $about Made by the e5 workflow, which \`script/e2e/fixtures.sh\` in scornz/lo runs." \
-                --jq .number); then
+                -f title="$title" -f body="$body" --jq .number); then
                 echo "Opened #$pr: $branch -> $base."
                 break
               fi
@@ -97,7 +90,47 @@ jobs:
             fi
           }
 
-          open_pull_request ship e4/gated pass "\`ci\` passes, so it waits only for an approval: approve and ship merges it."
-          open_pull_request auto e4/gated slow "\`ci\` passes 10 minutes after it starts, so approving it before then leaves it to auto-merge."
-          open_pull_request failing e4/gated fail "\`ci\` fails, so approve and ship stops after approving."
-          open_pull_request queue e4/queued pass "\`e4/queued\` merges only through its merge queue, so approve and ship adds it to the queue."
+          # Pushes e5/<kind>-<generation> from <base>, adding a ci-result file that says <result>,
+          # unless it's there, then opens its pull request.
+          open_kind() {
+            local kind=$1 base=$2 result=$3 about=$4
+            local branch="e5/$kind-$GENERATION" dir="e5/$kind-$GENERATION" head
+            if git rev-parse --verify --quiet "refs/remotes/origin/$branch" >/dev/null; then
+              head=$(git rev-parse "refs/remotes/origin/$branch")
+            else
+              git checkout --quiet --detach "refs/remotes/origin/$base"
+              mkdir -p "$dir"
+              echo "$result" >"$dir/ci-result"
+              printf '%s\n' "# E5: $kind, generation $GENERATION" "" "$about" "" \
+                "rozed-bot may review, approve and merge this pull request." >"$dir/notes.md"
+              git add "$dir"
+              git commit --quiet --message "test(e5): open $kind-$GENERATION"
+              git push --quiet origin "HEAD:refs/heads/$branch"
+              head=$(git rev-parse HEAD)
+              echo "Pushed $branch."
+            fi
+            open_pull_request "$branch" "$head" "$base" "E5: $kind (generation $GENERATION)" \
+              "Fixture E5 (pull requests rozed-bot can approve), opened by github-actions[bot] so that rozed-bot can review it. $about Made by the e5 workflow, which \`script/e2e/fixtures.sh\` in scornz/lo runs."
+          }
+
+          if [[ $WORKFLOWS == true ]]; then
+            branch="e5/workflows-$GENERATION"
+            if ! git rev-parse --verify --quiet "refs/remotes/origin/$branch" >/dev/null; then
+              echo "::error::$branch doesn't exist: rozed-bot pushes it first."
+              exit 1
+            fi
+            head=$(git rev-parse "refs/remotes/origin/$branch")
+            others=$(git diff --name-only "refs/remotes/origin/e4/gated...$head" -- . ':!.github/workflows')
+            if [[ -n $others ]]; then
+              echo "::error::$branch changes more than .github/workflows: $others"
+              exit 1
+            fi
+            open_pull_request "$branch" "$head" e4/gated "E5: e4/gated's workflows ($GENERATION)" \
+              "Brings \`e4/gated\`'s workflows in line with the ones \`script/e2e/fixtures.sh\` in scornz/lo writes. Its ruleset takes them only in a pull request rozed-bot approves as code owner, and rozed-bot can't approve its own, so github-actions[bot] opens it from rozed-bot's branch. rozed-bot approves and merges it."
+            exit 0
+          fi
+
+          open_kind ship e4/gated pass "\`ci\` passes, so it waits only for an approval: approve and ship merges it."
+          open_kind auto e4/gated slow "\`ci\` passes 10 minutes after it starts, so approving it before then leaves it to auto-merge."
+          open_kind failing e4/gated fail "\`ci\` fails, so approve and ship stops after approving."
+          open_kind queue e4/queued pass "\`e4/queued\` merges only through its merge queue, so approve and ship adds it to the queue."
