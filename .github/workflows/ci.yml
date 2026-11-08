@@ -2,21 +2,13 @@
 # comes from the `ci-result` files a change adds or changes: `pass`, `fail`, `slow` (passes after
 # 10 minutes), `flaky` (fails on a run's first attempt, and passes when run again) or
 # `fail-in-queue` (fails only in the merge queue). With several, as in a merge group, the worst
-# wins, and with none it passes. It runs for pull requests into e4/ branches and their merge queue,
-# and by hand on E5's branches, which GitHub opens pull requests from without running any workflow,
-# and on e4/pending.
+# wins, and with none it passes. It runs for pull requests into e4/ branches and their merge queue.
 name: ci
 
 on:
   pull_request:
     branches: ['e4/*']
   merge_group:
-  workflow_dispatch:
-    inputs:
-      base:
-        description: The branch the pull request targets, e4/gated or e4/queued
-        required: true
-        type: string
 
 permissions:
   contents: read
@@ -40,24 +32,10 @@ jobs:
           PR_HEAD: ${{ github.event.pull_request.head.sha }}
           GROUP_BASE: ${{ github.event.merge_group.base_sha }}
           GROUP_HEAD: ${{ github.event.merge_group.head_sha }}
-          DISPATCH_BASE: ${{ inputs.base }}
         run: |
           case $EVENT in
             pull_request) base=$PR_BASE head=$PR_HEAD ;;
             merge_group) base=$GROUP_BASE head=$GROUP_HEAD ;;
-            workflow_dispatch)
-              # Only where a fixture needs it, so a hand-run check can't stand in for another.
-              if ! [[ $GITHUB_REF =~ ^refs/heads/(e5/[a-z]+-[0-9]+|e4/pending)$ ]]; then
-                echo "::error::ci runs by hand only on E5's branches and e4/pending, not $GITHUB_REF."
-                exit 1
-              fi
-              if ! [[ $DISPATCH_BASE =~ ^e4/(gated|queued)$ ]]; then
-                echo "::error::The base is e4/gated or e4/queued, not '$DISPATCH_BASE'."
-                exit 1
-              fi
-              base=$(git rev-parse --verify "refs/remotes/origin/$DISPATCH_BASE^{commit}")
-              head=$GITHUB_SHA
-              ;;
             *)
               echo "::error::ci doesn't run on $EVENT."
               exit 1
