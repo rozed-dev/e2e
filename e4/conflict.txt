@@ -1,0 +1,4 @@
+Fixture E4: e4/gated and e4/conflict both change line 3, so e4/conflict's pull request conflicts.
+line 2
+line 3
+line 4

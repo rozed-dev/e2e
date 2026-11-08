@@ -1,0 +1,4 @@
+# Fixture E4 (script/e2e/fixtures.sh in scornz/lo): rozed-bot owns everything on e4/gated, whose
+# ruleset requires a code owner's approval. It can't approve its own pull requests, so E4's wait
+# for one; E5's, which github-actions[bot] opens, it can approve.
+* @rozed-bot
