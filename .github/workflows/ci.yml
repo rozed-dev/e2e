@@ -1,0 +1,88 @@
+# The `ci` check that fixtures E4 and E5 need (script/e2e/fixtures.sh in scornz/lo). Its result
+# comes from the `ci-result` files a change adds or changes: `pass`, `fail`, or `slow`, which
+# passes after 10 minutes. With several, as in a merge group, the worst wins, and with none it
+# passes. It runs for pull requests into e4/ branches and their merge queue, and on demand for
+# E5's pull requests, which GitHub opens without running any workflow.
+name: ci
+
+on:
+  pull_request:
+    branches: ['e4/*']
+  merge_group:
+  workflow_dispatch:
+    inputs:
+      base:
+        description: The branch the pull request targets
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Pass, fail or wait, as the change's ci-result files say
+        shell: bash
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+          GROUP_BASE: ${{ github.event.merge_group.base_sha }}
+          GROUP_HEAD: ${{ github.event.merge_group.head_sha }}
+          DISPATCH_BASE: ${{ inputs.base }}
+        run: |
+          case $EVENT in
+            pull_request) base=$PR_BASE head=$PR_HEAD ;;
+            merge_group) base=$GROUP_BASE head=$GROUP_HEAD ;;
+            workflow_dispatch)
+              if ! [[ $DISPATCH_BASE =~ ^e4/[a-z]+$ ]]; then
+                echo "::error::The base is one of E4's branches, not '$DISPATCH_BASE'."
+                exit 1
+              fi
+              base=$(git rev-parse --verify "refs/remotes/origin/$DISPATCH_BASE^{commit}")
+              head=$GITHUB_SHA
+              ;;
+            *)
+              echo "::error::ci doesn't run on $EVENT."
+              exit 1
+              ;;
+          esac
+          result=pass
+          while IFS= read -r file; do
+            case $file in
+              ci-result | */ci-result) ;;
+              *) continue ;;
+            esac
+            git cat-file -e "$head:$file" 2>/dev/null || continue
+            said=$(git show "$head:$file" | sed -n 1p)
+            echo "$file says $said."
+            case $said in
+              pass) ;;
+              fail) result=fail ;;
+              slow) if [[ $result == pass ]]; then result=slow; fi ;;
+              *)
+                echo "::error file=$file::A ci-result file says pass, fail or slow, not '$said'."
+                exit 1
+                ;;
+            esac
+          done < <(git diff --name-only "$base...$head")
+          case $result in
+            pass) echo "ci passes." ;;
+            fail)
+              echo "::error::ci fails, as a ci-result file asks."
+              exit 1
+              ;;
+            slow)
+              echo "ci passes in 10 minutes."
+              sleep 600
+              ;;
+          esac

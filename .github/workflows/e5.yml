@@ -1,0 +1,103 @@
+# Fixture E5 (script/e2e/fixtures.sh in scornz/lo): pull requests rozed-bot can review, approve and
+# merge. GitHub doesn't let an account approve its own, so github-actions[bot] opens them. The
+# script runs this for generation 1 with `setup`, and for each next one with `reset-e5`. Each run
+# opens:
+#
+# - e5/ship-<n> into e4/gated, where ci passes, so it waits only for an approval;
+# - e5/auto-<n> into e4/gated, where ci passes after 10 minutes, so approving it early leaves it to
+#   auto-merge;
+# - e5/failing-<n> into e4/gated, where ci fails, so approving it isn't enough;
+# - e5/queue-<n> into e4/queued, where ci passes, so it can join the merge queue.
+#
+# GitHub runs no workflow for a pull request a workflow opened, so this runs ci on each branch. Run
+# again for the same generation, it adds only what's missing.
+name: e5
+run-name: E5 generation ${{ inputs.generation }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      generation:
+        description: The number that ends each branch's name
+        required: true
+        type: string
+
+permissions:
+  actions: write # runs ci
+  contents: write # pushes the branches
+  pull-requests: write # opens the pull requests
+
+concurrency:
+  group: e5
+
+jobs:
+  open:
+    name: open
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Open the pull requests
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GENERATION: ${{ inputs.generation }}
+        run: |
+          if ! [[ $GENERATION =~ ^[1-9][0-9]{0,5}$ ]]; then
+            echo "::error::The generation is a number, not '$GENERATION'."
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # Opens e5/<kind>-<generation> into <base>, adding a ci-result file that says <result>,
+          # unless it's open already, and runs ci on it unless ci ran there.
+          open_pull_request() {
+            local kind=$1 base=$2 result=$3 about=$4
+            local branch="e5/$kind-$GENERATION" dir="e5/$kind-$GENERATION" head pr runs attempt
+            if git rev-parse --verify --quiet "refs/remotes/origin/$branch" >/dev/null; then
+              head=$(git rev-parse "refs/remotes/origin/$branch")
+            else
+              git checkout --quiet --detach "refs/remotes/origin/$base"
+              mkdir -p "$dir"
+              echo "$result" >"$dir/ci-result"
+              printf '%s\n' "# E5: $kind, generation $GENERATION" "" "$about" "" \
+                "rozed-bot may review, approve and merge this pull request." >"$dir/notes.md"
+              git add "$dir"
+              git commit --quiet --message "test(e5): open $kind-$GENERATION"
+              git push --quiet origin "HEAD:refs/heads/$branch"
+              head=$(git rev-parse HEAD)
+              echo "Pushed $branch."
+            fi
+            # A branch pushed a moment ago can be invisible to the API for a moment, and a failed
+            # request may still have opened the pull request, so it looks before trying again.
+            for attempt in 1 2 3; do
+              pr=$(gh api "repos/$GITHUB_REPOSITORY/pulls?state=all&head=$GITHUB_REPOSITORY_OWNER:$branch" \
+                --jq "first(.[] | select(.user.login == \"github-actions[bot]\"
+                  and .head.repo.full_name == \"$GITHUB_REPOSITORY\") | .number) // empty")
+              [[ -z $pr ]] || break
+              if pr=$(gh api -X POST "repos/$GITHUB_REPOSITORY/pulls" -f head="$branch" -f base="$base" \
+                -f title="E5: $kind (generation $GENERATION)" \
+                -f body="Fixture E5 (pull requests rozed-bot can approve), opened by github-actions[bot] so that rozed-bot can review it. $about Made by the e5 workflow, which \`script/e2e/fixtures.sh\` in scornz/lo runs." \
+                --jq .number); then
+                echo "Opened #$pr: $branch -> $base."
+                break
+              fi
+              ((attempt < 3)) || exit 1
+              sleep 3
+            done
+            runs=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$head&event=workflow_dispatch" \
+              --jq .total_count)
+            if ((runs == 0)); then
+              gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref "$branch" -f base="$base"
+              echo "Ran ci on $branch."
+            fi
+          }
+
+          open_pull_request ship e4/gated pass "\`ci\` passes, so it waits only for an approval: approve and ship merges it."
+          open_pull_request auto e4/gated slow "\`ci\` passes 10 minutes after it starts, so approving it before then leaves it to auto-merge."
+          open_pull_request failing e4/gated fail "\`ci\` fails, so approve and ship stops after approving."
+          open_pull_request queue e4/queued pass "\`e4/queued\` merges only through its merge queue, so approve and ship adds it to the queue."
