@@ -4,9 +4,10 @@ export interface Line {
   readonly text: string;
 }
 
-/** Splits `input` into lines, on `\n`. */
+/** Splits `input` into lines, on `\n` or `\r\n`. Empty input has no lines. */
 export function parse(input: string): Line[] {
-  return input.split('\n').map((text, index) => ({ number: index + 1, text }));
+  if (input === '') return [];
+  return input.split(/\r?\n/).map((text, index) => ({ number: index + 1, text }));
 }
 
 /** The lines of `input` that aren't blank. */
