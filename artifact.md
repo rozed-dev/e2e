@@ -49,8 +49,8 @@ never longer than the longest wait.
   all. The check is [`attempt >= backoff.retries`](code:overview/retry.ts#L34); an off-by-one there
   would make one call too many or too few.
 - **Waits can't grow without end.** `2 ** attempt` grows fast, and
-  [`Math.min`](code:overview/retry.ts#L17) caps it at the longest wait. With a large `retries`, the
-  product passes what a number holds exactly long before it's capped, but the cap still holds.
+  [`Math.min`](code:overview/retry.ts#L17) caps it at the longest wait, however large `retries`
+  is.
 - **The caller decides what's worth retrying.** [`retryable`](code:overview/retry.ts#L26) has no
   default, so every caller has to say which errors are passing ones.
 - **Sleeping is passed in** ([`sleep`](code:overview/retry.ts#L28)), which is how the tests run
