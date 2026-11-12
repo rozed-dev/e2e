@@ -14,7 +14,7 @@ export interface LimiterConfig {
 export const defaults: LimiterConfig = {
   capacity: 20,
   refillPerSecond: 5,
-  timeoutMs: 2_000,
+  timeoutMs: 5_000,
   maxWaiting: 100,
 };
 
