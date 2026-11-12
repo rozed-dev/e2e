@@ -94,3 +94,12 @@ test("one tenant's waiters don't hold up another's", async () => {
   clock.advance(1_000);
   await waiting;
 });
+
+test('with no refill, a waiting request fails at its timeout', async () => {
+  const clock = new FakeClock();
+  const limiter = new Limiter({ capacity: 1, refillPerSecond: 0, timeoutMs: 1_000 }, clock);
+  await limiter.take('acme');
+  const waiting = limiter.take('acme');
+  clock.advance(1_000);
+  await assert.rejects(waiting, LimitError);
+});

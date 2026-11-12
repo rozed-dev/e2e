@@ -1,3 +1,5 @@
+// Token buckets, one per tenant, each with a queue of requests waiting for its tokens.
+
 import { withDefaults, type LimiterConfig } from './config.ts';
 import { systemClock, type Clock } from './time.ts';
 import { Waiters } from './waiters.ts';
@@ -85,8 +87,10 @@ export class Limiter {
    */
   #scheduleWake(bucket: Bucket): void {
     if (bucket.cancelWake !== undefined) return;
+    // With no refill, no token ever comes: the waiters are left to their timeouts.
+    if (this.#config.refillPerSecond <= 0) return;
     const missing = Math.max(0, 1 - bucket.tokens);
-    const ms = Math.ceil((missing / this.#config.refillPerSecond) * 1000);
+    const ms = Math.ceil((missing * 1000) / this.#config.refillPerSecond);
     bucket.cancelWake = this.#clock.after(ms, () => {
       bucket.cancelWake = undefined;
       this.#refill(bucket);

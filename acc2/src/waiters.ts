@@ -36,7 +36,7 @@ export class Waiters {
   /** Lets the request that has waited longest go on. Returns false when none is waiting. */
   wakeOldest(): boolean {
     const waiter = this.#queue.shift();
-    if (waiter === undefined) return false;
+    if (!waiter) return false;
     waiter.cancel();
     waiter.resolve();
     return true;
