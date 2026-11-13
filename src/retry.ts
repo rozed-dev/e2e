@@ -1,5 +1,4 @@
-/** How long to wait between tries, in milliseconds. */
-const DELAY = 1000;
+import { delayFor, jittered } from './backoff.ts';
 
 /** Waits `ms` milliseconds. */
 function sleep(ms: number): Promise<void> {
@@ -14,7 +13,7 @@ export async function retry(attempt: () => Promise<void>, times = 3): Promise<vo
       return await attempt();
     } catch (error) {
       last = error;
-      await sleep(DELAY);
+      await sleep(jittered(delayFor(tried)));
     }
   }
   throw last;

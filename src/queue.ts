@@ -1,3 +1,5 @@
+import { retry } from './retry.ts';
+
 /** A job the queue runs: a name, and the work itself. */
 export interface Job {
   readonly name: string;
@@ -5,7 +7,7 @@ export interface Job {
 }
 
 /** How many jobs run at once. */
-const CONCURRENCY = 2;
+const CONCURRENCY = 4;
 
 /** Jobs waiting their turn, first in first out. */
 const waiting: Job[] = [];
@@ -30,7 +32,7 @@ function next(): void {
   const job = waiting.shift();
   if (job === undefined) return;
   running += 1;
-  void job.run().finally(() => {
+  void retry(job.run).finally(() => {
     running -= 1;
     next();
   });
