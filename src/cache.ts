@@ -5,3 +5,8 @@ const cached = new Map<string, number>();
 export function keep(name: string, points: number): void {
   cached.set(name, points);
 }
+
+/** The limit kept for the plan named `name`, if any. */
+export function kept(name: string): number | undefined {
+  return cached.get(name);
+}
