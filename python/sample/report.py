@@ -2,27 +2,17 @@
 
 from __future__ import annotations
 
-from .words import count_words
-
-
-def wrap(text: str, width: int) -> list[str]:
-    """Split `text` into lines of at most `width` characters, breaking between words."""
-    lines: list[str] = []
-    line = ""
-    for word in text.split():
-        if line != "" and len(line) + 1 + len(word) > width:
-            lines.append(line)
-            line = word
-        else:
-            line = word if line == "" else f"{line} {word}"
-    if line != "":
-        lines.append(line)
-    return lines
+from .layout import wrap
+from .words import Tally, count_words
 
 
 def summarize(text: str) -> str:
-    """Summarize `text`: how many words it has."""
-    return f"{count_words(text)} words"
+    """Summarize `text`: how many words it has, and the one that comes up most."""
+    tally = Tally()
+    for word in text.split():
+        tally.add(word.lower())
+    total = count_words(text)
+    return f'{total} words, mostly "{tally.top() or ""}"'
 
 
 def report(text: str, width: int) -> list[str]:
