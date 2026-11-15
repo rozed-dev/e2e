@@ -1,0 +1,4 @@
+#!/bin/sh
+# Fixture: git's post-index-change hook. Writes the empty file lo-hostile-hook beside itself, and nothing else.
+: >"$(dirname "$0")/lo-hostile-hook"
+exit 1

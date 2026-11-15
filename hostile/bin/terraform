@@ -1,0 +1,4 @@
+#!/bin/sh
+# Fixture: a Terraform a language server finds on PATH. Writes the empty file lo-hostile-terraform beside itself, and nothing else.
+: >"$(dirname "$0")/lo-hostile-terraform"
+exit 1

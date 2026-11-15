@@ -1,0 +1,2 @@
+[registries.lo-hostile]
+index = "sparse+https://cargo.lo-hostile.invalid/index/"

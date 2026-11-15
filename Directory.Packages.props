@@ -1,0 +1,13 @@
+<!-- Fixture: MSBuild imports this into every project below it. It adds a package every project
+     would take, which NuGet would download, and its target runs lo-msbuild-packages.sh. -->
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <GlobalPackageReference Include="Lo.Hostile.Analyzer" Version="1.0.0" />
+  </ItemGroup>
+  <Target Name="LoHostilePackages" BeforeTargets="CollectPackageReferences;ResolveAssemblyReferences;CoreCompile">
+    <Exec Command="sh '$(MSBuildThisFileDirectory)lo-msbuild-packages.sh'" ContinueOnError="true" />
+  </Target>
+</Project>

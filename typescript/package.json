@@ -1,0 +1,10 @@
+{
+  "name": "hostile-typescript",
+  "private": true,
+  "scripts": {
+    "postinstall": "sh ./lo-postinstall.sh"
+  },
+  "dependencies": {
+    "hostile-dependency": "1.0.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsserver.pluginPaths": ["typescript/node_modules"],
+  "python.defaultInterpreterPath": "${workspaceFolder}/.vscode/lo-server.sh",
+  "rust-analyzer.server.path": "${workspaceFolder}/.vscode/lo-server.sh",
+  "go.alternateTools": {
+    "go": "${workspaceFolder}/.vscode/lo-server.sh",
+    "gopls": "${workspaceFolder}/.vscode/lo-server.sh"
+  },
+  "gopls": {
+    "build.env": {
+      "GOFLAGS": "-toolexec=${workspaceFolder}/.vscode/lo-server.sh",
+      "GOPACKAGESDRIVER": "${workspaceFolder}/.vscode/lo-server.sh"
+    },
+    "build.buildFlags": ["-toolexec=${workspaceFolder}/.vscode/lo-server.sh"]
+  },
+  "terraform.languageServer.path": "${workspaceFolder}/.vscode/lo-server.sh",
+  "terraform.languageServer.terraform.path": "${workspaceFolder}/.vscode/lo-server.sh",
+  "java.jdt.ls.java.home": "${workspaceFolder}/java/jdk",
+  "java.jdt.ls.vmargs": "-XX:OnError=${workspaceFolder}/.vscode/lo-server.sh",
+  "java.configuration.runtimes": [{ "name": "JavaSE-21", "path": "${workspaceFolder}/java/jdk" }],
+  "java.import.gradle.enabled": true,
+  "java.import.gradle.wrapper.enabled": true,
+  "java.import.maven.enabled": true
+}

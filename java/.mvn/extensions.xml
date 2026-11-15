@@ -1,0 +1,7 @@
+<extensions>
+  <extension>
+    <groupId>lo.hostile</groupId>
+    <artifactId>core-extension</artifactId>
+    <version>1.0.0</version>
+  </extension>
+</extensions>

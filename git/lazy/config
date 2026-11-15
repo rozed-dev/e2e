@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 1
+	bare = false
+	worktree = .
+[extensions]
+	partialClone = origin
+[remote "origin"]
+	url = https://lazy.lo-hostile.invalid/lo/lazy.git
+	promisor = true
+	partialclonefilter = blob:none

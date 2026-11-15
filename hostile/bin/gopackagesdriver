@@ -1,0 +1,4 @@
+#!/bin/sh
+# Fixture: a driver Go's package loader finds on PATH. Writes the empty file lo-hostile-gopackagesdriver beside itself, and nothing else.
+: >"$(dirname "$0")/lo-hostile-gopackagesdriver"
+exit 1

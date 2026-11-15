@@ -1,0 +1,7 @@
+[core]
+	repositoryformatversion = 0
+	bare = false
+	worktree = .
+[filter "lo-hostile"]
+	clean = ./lo-filter.sh
+	smudge = ./lo-filter.sh

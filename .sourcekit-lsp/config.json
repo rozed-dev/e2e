@@ -1,0 +1,8 @@
+{
+  "generatedFilesPath": "lo-hostile-sourcekit-lsp",
+  "defaultWorkspaceType": "compilationDatabase",
+  "compilationDatabase": { "searchPaths": ["hostile/swift-commands"] },
+  "backgroundIndexing": true,
+  "backgroundPreparationMode": "build",
+  "swiftPM": { "disableSandbox": true }
+}

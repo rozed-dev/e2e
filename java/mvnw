@@ -1,0 +1,4 @@
+#!/bin/sh
+# Fixture: Maven's wrapper script. Writes the empty file lo-hostile-mvnw beside itself, and nothing else.
+: >"$(dirname "$0")/lo-hostile-mvnw"
+exit 1

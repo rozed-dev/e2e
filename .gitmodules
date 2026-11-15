@@ -1,0 +1,3 @@
+[submodule "hostile"]
+	path = hostile/submodule
+	url = https://submodule.lo-hostile.invalid/lo/submodule.git

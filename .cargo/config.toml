@@ -1,0 +1,8 @@
+include = ["lo-include.toml"]
+
+[unstable]
+config-include = true
+
+[env]
+DYLD_INSERT_LIBRARIES = { value = "lo-env.dylib", force = true }
+LD_PRELOAD = { value = "lo-env.so", force = true }

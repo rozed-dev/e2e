@@ -1,0 +1,28 @@
+[
+  {
+    "directory": ".",
+    "file": "Lo.swift",
+    "arguments": [
+      "swiftc",
+      "-module-name",
+      "LoHostile",
+      "-load-plugin-executable",
+      "lo-swift-macro.sh#LoHostileMacros",
+      "Lo.swift"
+    ]
+  },
+  {
+    "directory": ".",
+    "file": "lo.c",
+    "arguments": [
+      "clang",
+      "-Xclang",
+      "-load",
+      "-Xclang",
+      "lo-clang-plugin.dylib",
+      "-fplugin=lo-clang-plugin.dylib",
+      "-c",
+      "lo.c"
+    ]
+  }
+]
