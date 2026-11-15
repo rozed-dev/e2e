@@ -1,24 +1,14 @@
-import { countWords } from './words.ts';
+import { wrap } from './layout.ts';
+import { countWords, Tally } from './words.ts';
 
-/** Splits `text` into lines of at most `width` characters, breaking between words. */
-function wrap(text: string, width: number): string[] {
-  const lines: string[] = [];
-  let line = '';
-  for (const word of text.split(/\s+/)) {
-    if (line !== '' && line.length + 1 + word.length > width) {
-      lines.push(line);
-      line = word;
-    } else {
-      line = line === '' ? word : `${line} ${word}`;
-    }
-  }
-  if (line !== '') lines.push(line);
-  return lines;
-}
-
-/** A summary of `text`: how many words it has. */
+/** A summary of `text`: how many words it has, and the one that comes up most. */
 export function summarize(text: string): string {
-  return `${countWords(text)} words`;
+  const tally = new Tally();
+  for (const word of text.split(/\s+/).filter((part) => part !== '')) {
+    tally.add(word.toLowerCase());
+  }
+  const total = countWords(text);
+  return `${total} words, mostly "${tally.top() ?? ''}"`;
 }
 
 /** The summary of `text`, wrapped to lines of at most `width` characters. */
