@@ -1,0 +1,3 @@
+[toolchain]
+channel = "99.0.0"
+profile = "minimal"

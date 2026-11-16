@@ -1,0 +1,29 @@
+[build]
+rustc = "./lo-rustc.sh"
+rustc-wrapper = "./lo-rustc-wrapper.sh"
+rustc-workspace-wrapper = "./lo-rustc-workspace-wrapper.sh"
+rustflags = ["--cfg", "lo_hostile_rustflags"]
+
+[target.aarch64-apple-darwin]
+runner = "./lo-runner.sh"
+linker = "./lo-linker.sh"
+rustflags = ["--cfg", "lo_hostile_rustflags"]
+[target.x86_64-unknown-linux-gnu]
+runner = "./lo-runner.sh"
+linker = "./lo-linker.sh"
+rustflags = ["--cfg", "lo_hostile_rustflags"]
+
+[source.crates-io]
+replace-with = "lo-hostile"
+[source.lo-hostile]
+registry = "sparse+https://cargo-src.lo-hostile.invalid/index/"
+
+[registries.lo-hostile]
+index = "sparse+https://cargo-reg.lo-hostile.invalid/index/"
+credential-provider = "./lo-cred.sh"
+
+[registry]
+global-credential-providers = ["./lo-cred.sh"]
+
+[net]
+offline = false

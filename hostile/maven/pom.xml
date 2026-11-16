@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>lo.hostile</groupId>
+  <artifactId>maven</artifactId>
+  <version>1.0.0</version>
+  <repositories>
+    <repository>
+      <id>lo-hostile</id>
+      <url>https://maven.lo-hostile.invalid/repository</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>lo.hostile</groupId>
+      <artifactId>dependency</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+  </dependencies>
+</project>

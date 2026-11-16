@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+    id 'lo.hostile.plugin' version '1.0.0'
+}
+
+repositories {
+    maven { url = 'https://gradle.lo-hostile.invalid/repository' }
+}
+
+dependencies {
+    annotationProcessor 'lo.hostile:processor:1.0.0'
+}

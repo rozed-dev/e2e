@@ -1,0 +1,4 @@
+#!/bin/sh
+# Fixture: Gradle's wrapper script. Writes the empty file lo-hostile-gradlew beside itself, and nothing else.
+: >"$(dirname "$0")/lo-hostile-gradlew"
+exit 1

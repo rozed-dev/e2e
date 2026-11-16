@@ -1,0 +1,9 @@
+{
+  "externalTools": {
+    "phpstan": { "enabled": true, "binPath": "vendor/bin/phpstan" },
+    "phpcs": { "enabled": true, "binPath": "vendor/bin/phpcs" }
+  },
+  "cachePath": "lo-hostile-php-lsp-cache",
+  "phpVersion": "7.4",
+  "indexVendor": true
+}

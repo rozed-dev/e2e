@@ -1,0 +1,4 @@
+#!/bin/sh
+# Fixture: the java of a JDK in the checkout. Writes the empty file lo-hostile-gradle-java beside itself, and nothing else.
+: >"$(dirname "$0")/lo-hostile-gradle-java"
+exit 1

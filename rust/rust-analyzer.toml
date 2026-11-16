@@ -1,0 +1,13 @@
+[cargo]
+extraEnv = { DYLD_INSERT_LIBRARIES = "lo-env.dylib" }
+
+[cargo.buildScripts]
+enable = true
+overrideCommand = ["./lo-rust-analyzer.sh"]
+
+[check]
+overrideCommand = ["./lo-rust-analyzer.sh"]
+
+[procMacro]
+enable = true
+server = "./lo-rust-analyzer.sh"

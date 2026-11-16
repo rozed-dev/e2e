@@ -1,0 +1,9 @@
+{
+  "name": "lo-hostile/php",
+  "repositories": [
+    { "type": "composer", "url": "https://composer.lo-hostile.invalid" }
+  ],
+  "require": {
+    "lo-hostile/dependency": "1.0.0"
+  }
+}

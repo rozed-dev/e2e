@@ -1,0 +1,17 @@
+<!-- Fixture: MSBuild imports this into every project below it. Its target runs lo-msbuild-props.sh,
+     and a task MSBuild compiles from the C# below, which writes lo-hostile-msbuild-inline beside
+     this file. -->
+<Project InitialTargets="LoHostileProps">
+  <UsingTask TaskName="LoHostileInline" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)/Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <Folder ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Code Type="Fragment" Language="cs"><![CDATA[System.IO.File.WriteAllText(System.IO.Path.Combine(Folder, "lo-hostile-msbuild-inline"), "");]]></Code>
+    </Task>
+  </UsingTask>
+  <Target Name="LoHostileProps" BeforeTargets="Restore;CollectPackageReferences;ResolveAssemblyReferences;CoreCompile">
+    <Exec Command="sh '$(MSBuildThisFileDirectory)lo-msbuild-props.sh'" ContinueOnError="true" />
+    <LoHostileInline Folder="$(MSBuildThisFileDirectory)" ContinueOnError="true" />
+  </Target>
+</Project>

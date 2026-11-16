@@ -1,0 +1,7 @@
+{
+  "name": "lo-hostile",
+  "version": "1.0.0",
+  "bspVersion": "2.2.0",
+  "languages": ["swift", "c"],
+  "argv": ["hostile/swift-bsp/lo-bsp.sh"]
+}

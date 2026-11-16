@@ -1,0 +1,10 @@
+<!-- Fixture: MSBuild imports this into every project below it. It adds an analyzer the compiler
+     would load, and its target runs lo-msbuild-targets.sh. -->
+<Project>
+  <ItemGroup>
+    <Analyzer Include="$(MSBuildThisFileDirectory)hostile/analyzer/Lo.Hostile.Analyzer.dll" />
+  </ItemGroup>
+  <Target Name="LoHostileTargets" AfterTargets="ResolveAssemblyReferences;CoreCompile">
+    <Exec Command="sh '$(MSBuildThisFileDirectory)lo-msbuild-targets.sh'" ContinueOnError="true" />
+  </Target>
+</Project>
